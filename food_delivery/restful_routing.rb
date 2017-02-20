@@ -1,4 +1,5 @@
                     Prefix Verb   URI Pattern                           Controller#Action
+                home_index GET    /home/index(.:format)                 home#index
    order_ingredients_index GET    /order_ingredients/index(.:format)    order_ingredients#index
      order_ingredients_new GET    /order_ingredients/new(.:format)      order_ingredients#new
   order_ingredients_create GET    /order_ingredients/create(.:format)   order_ingredients#create

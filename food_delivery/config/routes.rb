@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'home/index'
+
   get 'order_ingredients/index'
 
   get 'order_ingredients/new'
