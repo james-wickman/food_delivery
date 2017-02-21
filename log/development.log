@@ -1183,3 +1183,713 @@ Unpermitted parameters: first_name, last_name
 Completed 200 OK in 90ms (Views: 70.9ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for ::1 at 2017-02-21 12:09:55 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+  Rendered users/sessions/_new.html.erb (24.9ms)
+  Rendered users/registrations/_new.html.erb (2.7ms)
+Completed 200 OK in 453ms (Views: 411.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 12:10:40 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/sessions/_new.html.erb (2.2ms)
+  Rendered users/registrations/_new.html.erb (3.5ms)
+Completed 200 OK in 76ms (Views: 72.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 12:13:14 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered users/sessions/_new.html.erb (2.8ms)
+  Rendered users/registrations/_new.html.erb (5.2ms)
+Completed 200 OK in 60ms (Views: 57.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 12:14:36 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered users/sessions/_new.html.erb (3.8ms)
+  Rendered users/registrations/_new.html.erb (6.0ms)
+Completed 200 OK in 60ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 12:15:14 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/sessions/_new.html.erb (4.6ms)
+  Rendered users/registrations/_new.html.erb (5.7ms)
+Completed 200 OK in 62ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 12:15:45 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  Rendered users/sessions/_new.html.erb (4.0ms)
+  Rendered users/registrations/_new.html.erb (5.1ms)
+Completed 200 OK in 67ms (Views: 63.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 12:18:50 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/sessions/_new.html.erb (1.8ms)
+  Rendered users/registrations/_new.html.erb (3.8ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 12:24:00 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered users/sessions/_new.html.erb (2.6ms)
+  Rendered users/registrations/_new.html.erb (3.9ms)
+Completed 200 OK in 41ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 12:25:56 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered users/sessions/_new.html.erb (2.0ms)
+  Rendered users/registrations/_new.html.erb (4.8ms)
+Completed 200 OK in 41ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 12:27:17 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/sessions/_new.html.erb (1.7ms)
+  Rendered users/registrations/_new.html.erb (2.1ms)
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 12:30:42 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/sessions/_new.html.erb (1.8ms)
+  Rendered users/sessions/_new.html.erb (1.6ms)
+  Rendered users/registrations/_new.html.erb (3.9ms)
+Completed 200 OK in 41ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 12:34:25 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.5ms)
+  Rendered users/sessions/_new.html.erb (28.4ms)
+  Rendered users/sessions/_new.html.erb (1.5ms)
+  Rendered users/registrations/_new.html.erb (3.8ms)
+Completed 200 OK in 319ms (Views: 287.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 13:43:59 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+  Rendered users/sessions/_new.html.erb (27.9ms)
+  Rendered users/sessions/_new.html.erb (1.2ms)
+  Rendered users/registrations/_new.html.erb (6.5ms)
+Completed 200 OK in 347ms (Views: 317.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 13:46:57 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered users/sessions/_new.html.erb (6.9ms)
+  Rendered users/sessions/_new.html.erb (1.8ms)
+  Rendered users/registrations/_new.html.erb (4.2ms)
+Completed 200 OK in 71ms (Views: 68.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 13:52:25 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered users/sessions/_new.html.erb (20.8ms)
+  Rendered users/sessions/_new.html.erb (1.2ms)
+  Rendered users/registrations/_new.html.erb (2.3ms)
+Completed 200 OK in 72ms (Views: 68.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 13:52:46 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/sessions/_new.html.erb (2.0ms)
+  Rendered users/sessions/_new.html.erb (1.6ms)
+  Rendered users/registrations/_new.html.erb (3.9ms)
+Completed 200 OK in 47ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 13:52:47 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+  Rendered users/sessions/_new.html.erb (2.9ms)
+  Rendered users/sessions/_new.html.erb (2.3ms)
+  Rendered users/registrations/_new.html.erb (2.1ms)
+Completed 200 OK in 61ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 13:52:47 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+  Rendered users/sessions/_new.html.erb (3.2ms)
+  Rendered users/sessions/_new.html.erb (2.1ms)
+  Rendered users/registrations/_new.html.erb (4.2ms)
+Completed 200 OK in 84ms (Views: 81.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 13:52:48 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+  Rendered users/sessions/_new.html.erb (3.4ms)
+  Rendered users/sessions/_new.html.erb (2.5ms)
+  Rendered users/registrations/_new.html.erb (15.5ms)
+Completed 200 OK in 94ms (Views: 90.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 13:52:48 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+  Rendered users/sessions/_new.html.erb (4.6ms)
+  Rendered users/sessions/_new.html.erb (2.5ms)
+  Rendered users/registrations/_new.html.erb (4.4ms)
+Completed 200 OK in 86ms (Views: 82.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 13:52:49 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered users/sessions/_new.html.erb (3.8ms)
+  Rendered users/sessions/_new.html.erb (2.3ms)
+  Rendered users/registrations/_new.html.erb (3.9ms)
+Completed 200 OK in 80ms (Views: 77.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 13:52:51 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered users/sessions/_new.html.erb (4.8ms)
+  Rendered users/sessions/_new.html.erb (2.1ms)
+  Rendered users/registrations/_new.html.erb (4.2ms)
+Completed 200 OK in 58ms (Views: 56.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 13:56:13 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/sessions/_new.html.erb (4.0ms)
+  Rendered users/sessions/_new.html.erb (3.2ms)
+  Rendered users/registrations/_new.html.erb (2.6ms)
+Completed 200 OK in 63ms (Views: 59.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 13:58:29 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered users/sessions/_new.html.erb (2.1ms)
+  Rendered users/sessions/_new.html.erb (2.0ms)
+  Rendered users/registrations/_new.html.erb (3.9ms)
+Completed 200 OK in 43ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 13:59:28 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered users/sessions/_new.html.erb (2.0ms)
+  Rendered users/sessions/_new.html.erb (2.0ms)
+  Rendered users/registrations/_new.html.erb (3.6ms)
+Completed 200 OK in 45ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 14:00:30 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/sessions/_new.html.erb (2.0ms)
+  Rendered users/sessions/_new.html.erb (1.9ms)
+  Rendered users/registrations/_new.html.erb (4.5ms)
+Completed 200 OK in 44ms (Views: 41.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 14:03:34 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/sessions/_new.html.erb (3.2ms)
+  Rendered users/sessions/_new.html.erb (1.3ms)
+  Rendered users/registrations/_new.html.erb (2.7ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 14:06:11 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/sessions/_new.html.erb (1.6ms)
+  Rendered users/sessions/_new.html.erb (1.5ms)
+  Rendered users/registrations/_new.html.erb (3.7ms)
+Completed 200 OK in 41ms (Views: 37.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 14:06:18 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/sessions/_new.html.erb (1.7ms)
+  Rendered users/sessions/_new.html.erb (1.0ms)
+  Rendered users/registrations/_new.html.erb (2.1ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 14:09:23 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/sessions/_new.html.erb (10.8ms)
+  Rendered users/sessions/_new.html.erb (4.3ms)
+  Rendered users/registrations/_new.html.erb (5.4ms)
+Completed 200 OK in 66ms (Views: 64.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 14:09:58 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/registrations/_new.html.erb (2.3ms)
+  Rendered users/sessions/_new.html.erb (1.7ms)
+  Rendered users/sessions/_new.html.erb (2.2ms)
+  Rendered users/registrations/_new.html.erb (2.0ms)
+Completed 200 OK in 47ms (Views: 45.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 14:11:00 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/registrations/_new.html.erb (3.2ms)
+  Rendered users/sessions/_new.html.erb (3.6ms)
+  Rendered users/sessions/_new.html.erb (2.1ms)
+  Rendered users/registrations/_new.html.erb (1.8ms)
+Completed 200 OK in 48ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 14:12:58 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/registrations/_new.html.erb (5.4ms)
+  Rendered users/sessions/_new.html.erb (2.4ms)
+  Rendered users/sessions/_new.html.erb (1.2ms)
+  Rendered users/registrations/_new.html.erb (1.5ms)
+Completed 200 OK in 50ms (Views: 48.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 14:13:44 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/registrations/_new.html.erb (2.2ms)
+  Rendered users/sessions/_new.html.erb (1.5ms)
+  Rendered users/sessions/_new.html.erb (1.1ms)
+  Rendered users/sessions/_new.html.erb (2.4ms)
+  Rendered users/registrations/_new.html.erb (4.1ms)
+Completed 200 OK in 57ms (Views: 55.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 14:14:28 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/registrations/_new.html.erb (3.9ms)
+  Rendered users/sessions/_new.html.erb (2.8ms)
+  Rendered users/sessions/_new.html.erb (1.9ms)
+  Rendered users/sessions/_new.html.erb (1.1ms)
+  Rendered users/registrations/_new.html.erb (1.6ms)
+Completed 200 OK in 51ms (Views: 49.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 14:18:30 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/registrations/_new.html.erb (3.4ms)
+  Rendered users/sessions/_new.html.erb (2.3ms)
+  Rendered users/sessions/_new.html.erb (2.1ms)
+  Rendered users/sessions/_new.html.erb (1.5ms)
+  Rendered users/registrations/_new.html.erb (1.5ms)
+Completed 200 OK in 68ms (Views: 65.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 14:18:54 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/registrations/_new.html.erb (2.2ms)
+  Rendered users/sessions/_new.html.erb (1.5ms)
+  Rendered users/sessions/_new.html.erb (2.2ms)
+  Rendered users/sessions/_new.html.erb (2.4ms)
+  Rendered users/registrations/_new.html.erb (3.4ms)
+Completed 200 OK in 57ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 14:20:03 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/registrations/_new.html.erb (2.2ms)
+  Rendered users/sessions/_new.html.erb (2.3ms)
+  Rendered users/sessions/_new.html.erb (2.0ms)
+  Rendered users/sessions/_new.html.erb (1.6ms)
+  Rendered users/registrations/_new.html.erb (3.0ms)
+Completed 200 OK in 55ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 14:20:28 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/registrations/_new.html.erb (3.0ms)
+  Rendered users/sessions/_new.html.erb (3.0ms)
+  Rendered users/sessions/_new.html.erb (1.5ms)
+  Rendered users/sessions/_new.html.erb (1.0ms)
+  Rendered users/registrations/_new.html.erb (1.4ms)
+Completed 200 OK in 48ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 14:30:05 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/registrations/_new.html.erb (3.8ms)
+  Rendered users/sessions/_new.html.erb (3.1ms)
+  Rendered users/sessions/_new.html.erb (2.0ms)
+  Rendered users/sessions/_new.html.erb (1.2ms)
+  Rendered users/registrations/_new.html.erb (1.4ms)
+Completed 200 OK in 69ms (Views: 66.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 14:31:10 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/registrations/_new.html.erb (9.6ms)
+  Rendered users/sessions/_new.html.erb (1.6ms)
+  Rendered users/sessions/_new.html.erb (1.0ms)
+  Rendered users/sessions/_new.html.erb (0.9ms)
+  Rendered users/registrations/_new.html.erb (4.2ms)
+Completed 200 OK in 56ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 14:31:29 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/registrations/_new.html.erb (3.2ms)
+  Rendered users/sessions/_new.html.erb (3.4ms)
+  Rendered users/sessions/_new.html.erb (1.3ms)
+  Rendered users/sessions/_new.html.erb (1.0ms)
+  Rendered users/registrations/_new.html.erb (1.3ms)
+Completed 200 OK in 47ms (Views: 45.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 14:32:05 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/registrations/_new.html.erb (2.3ms)
+  Rendered users/sessions/_new.html.erb (1.5ms)
+  Rendered users/sessions/_new.html.erb (2.4ms)
+  Rendered users/sessions/_new.html.erb (2.0ms)
+  Rendered users/registrations/_new.html.erb (1.5ms)
+  Rendered users/registrations/_new.html.erb (2.3ms)
+Completed 200 OK in 54ms (Views: 51.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 14:32:29 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/registrations/_new.html.erb (2.2ms)
+  Rendered users/sessions/_new.html.erb (2.1ms)
+  Rendered users/sessions/_new.html.erb (2.2ms)
+  Rendered users/sessions/_new.html.erb (1.4ms)
+  Rendered users/registrations/_new.html.erb (1.9ms)
+  Rendered users/registrations/_new.html.erb (2.6ms)
+  Rendered users/sessions/_new.html.erb (1.2ms)
+Completed 200 OK in 58ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 14:36:49 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered users/sessions/_new.html.erb (2.5ms)
+  Rendered users/sessions/_new.html.erb (2.3ms)
+  Rendered users/registrations/_new.html.erb (2.6ms)
+  Rendered users/registrations/_new.html.erb (1.3ms)
+  Rendered users/sessions/_new.html.erb (1.0ms)
+Completed 200 OK in 70ms (Views: 67.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 14:37:39 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/registrations/_new.html.erb (4.3ms)
+  Rendered users/sessions/_new.html.erb (2.9ms)
+Completed 200 OK in 42ms (Views: 39.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 14:38:12 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered users/registrations/_new.html.erb (3.2ms)
+  Rendered users/sessions/_new.html.erb (3.1ms)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 15:02:55 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered users/registrations/_new.html.erb (5.9ms)
+  Rendered users/sessions/_new.html.erb (12.9ms)
+Completed 200 OK in 88ms (Views: 83.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 15:04:05 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered users/registrations/_new.html.erb (6.4ms)
+  Rendered users/sessions/_new.html.erb (2.5ms)
+Completed 200 OK in 59ms (Views: 57.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 15:04:58 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/registrations/_new.html.erb (2.4ms)
+  Rendered users/sessions/_new.html.erb (2.9ms)
+Completed 200 OK in 42ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 15:05:15 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered users/registrations/_new.html.erb (5.4ms)
+  Rendered users/sessions/_new.html.erb (2.6ms)
+Completed 200 OK in 53ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 15:07:12 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/registrations/_new.html.erb (10.3ms)
+  Rendered users/sessions/_new.html.erb (1.7ms)
+Completed 200 OK in 46ms (Views: 44.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 15:07:54 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/registrations/_new.html.erb (2.6ms)
+  Rendered users/sessions/_new.html.erb (2.9ms)
+Completed 200 OK in 40ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 15:15:05 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered users/registrations/_new.html.erb (5.7ms)
+  Rendered users/sessions/_new.html.erb (2.6ms)
+Completed 200 OK in 59ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 15:15:15 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+  Rendered users/registrations/_new.html.erb (4.0ms)
+  Rendered users/sessions/_new.html.erb (3.0ms)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-02-21 15:15:23 -0700
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AHTNvHnZ6shHgvf6DBbvLgJ27/CUcKYBWDdjBzqI6g/dIl5vwfbttROySHlklfg5SpC4/IZvr8DP4M/OmC0B8w==", "user"=>{"email"=>"nauticalnova@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "nauticalnova@hotmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 15:15:31 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered users/registrations/_new.html.erb (3.2ms)
+  Rendered users/sessions/_new.html.erb (3.9ms)
+Completed 200 OK in 39ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 15:16:23 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+  Rendered users/registrations/_new.html.erb (2.8ms)
+  Rendered users/sessions/_new.html.erb (3.2ms)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 15:16:54 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered users/registrations/_new.html.erb (2.1ms)
+  Rendered users/sessions/_new.html.erb (3.0ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 15:17:18 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/registrations/_new.html.erb (2.7ms)
+  Rendered users/sessions/_new.html.erb (3.1ms)
+Completed 200 OK in 39ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 15:18:53 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/registrations/_new.html.erb (4.0ms)
+  Rendered users/sessions/_new.html.erb (1.5ms)
+Completed 200 OK in 65ms (Views: 45.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 15:19:14 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered users/registrations/_new.html.erb (4.7ms)
+  Rendered users/sessions/_new.html.erb (2.8ms)
+Completed 200 OK in 46ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-02-21 15:19:27 -0700
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qMg2laXKcYAFCZtODIS8gbWotQoQjinmmpMQ1KZ+SUp1nqVGHeV2/VE5JM1kB6uW/U7iBgKRICcNRLwdBNuitg==", "user"=>{"email"=>"none@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "none@hotmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-02-21 22:19:27 UTC], ["last_sign_in_at", 2017-02-21 17:33:56 UTC], ["sign_in_count", 4], ["updated_at", 2017-02-21 22:19:27 UTC], ["id", 2]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/show
+Completed 302 Found in 197ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/users/show" for ::1 at 2017-02-21 15:19:27 -0700
+Processing by UsersController#show as HTML
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered users/registrations/_new.html.erb (5.1ms)
+  Rendered users/sessions/_new.html.erb (14.8ms)
+Completed 200 OK in 57ms (Views: 54.5ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2017-02-21 15:19:31 -0700
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Tqo6xMNf9jGN5GthvteCKMdW9oICKXfBUAwFZ1WR6wUVp3OarNZk8JidqOtTUPq+iJo/cVr5QhzEJeIKse8p3w=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 15:19:31 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/registrations/_new.html.erb (2.7ms)
+  Rendered users/sessions/_new.html.erb (4.8ms)
+Completed 200 OK in 41ms (Views: 38.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 15:29:16 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/registrations/_new.html.erb (4.2ms)
+  Rendered users/sessions/_new.html.erb (1.9ms)
+Completed 200 OK in 138ms (Views: 135.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 15:30:11 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+  Rendered users/registrations/_new.html.erb (2.2ms)
+  Rendered users/sessions/_new.html.erb (2.8ms)
+Completed 200 OK in 96ms (Views: 94.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 15:32:26 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  Rendered users/registrations/_new.html.erb (4.3ms)
+  Rendered users/sessions/_new.html.erb (1.7ms)
+Completed 200 OK in 112ms (Views: 110.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 15:33:31 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+  Rendered users/registrations/_new.html.erb (3.3ms)
+  Rendered users/sessions/_new.html.erb (1.7ms)
+Completed 200 OK in 106ms (Views: 104.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-21 15:34:08 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+  Rendered users/registrations/_new.html.erb (24.2ms)
+  Rendered users/sessions/_new.html.erb (3.7ms)
+Completed 200 OK in 371ms (Views: 327.6ms | ActiveRecord: 0.9ms)
+
+
