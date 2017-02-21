@@ -1,0 +1,18 @@
+<%= form_for(recipe) do |f| %>
+
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p><br>
+  <p>
+    <%= f.label :total_time%>
+    <%= f.text_field :total_time%>
+  </p><br>
+  <p>
+    <%= f.label :instructions %>
+    <%= f.text_field :instructions%>
+  </p><br>
+  <p>
+    <%= f.submit %>
+  </p><br>
+<% end %><br>
