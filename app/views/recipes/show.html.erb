@@ -2,9 +2,13 @@
 <p>Find me in app/views/recipes/show.html.erb</p>
 <div class="container-fluid">
 	<div class="row">
-	<h3 class="title">Chicken Stir-Fry</h3>
+	<h3 class="title">
+		<strong>Title:</strong>
+		<%= @recipe.title %>
+	</h3>
 		<div class="col-md-6"><%= image_tag("chicken_stir_fry.jpeg") %></div>
 		<div class="col-md-6"><h3 class="title">Ingredient List</h3>
+
 			<ul class="recipe_list_items">
 				<p>
 					<input type="checkbox" value="2 tablespoons dark sesame oil, divided" data-type="list-item" id="Ingredient00">
@@ -12,47 +16,55 @@
 				</p>
 				<p>
 					<input type="checkbox" value="2 garlic cloves, finely minced" data-type="list-item" id="Ingredient01">
-					<label class="o-Ingredients__a-ListItemText" for="Ingredient01">2 garlic cloves, finely minced</label>
+					<label class="ingredients__ListItemText" for="Ingredient01">2 garlic cloves, finely minced</label>
 				</p>
 				<p>
 					<input type="checkbox" value="2 pounds chicken breasts, skinless and boneless" data-type="list-item" id="Ingredient02">
-					<label class="o-Ingredients__a-ListItemText" for="Ingredient02">2 pounds chicken breasts, skinless and boneless</label>
+					<label class="ingredients__ListItemText" for="Ingredient02">2 pounds chicken breasts, skinless and boneless</label>
 				</p>
 				<p>
 					<input type="checkbox" value="1 head broccoli, stems removed" data-type="list-item" id="Ingredient03">
-					<label class="o-Ingredients__a-ListItemText" for="Ingredient03">1 head broccoli, stems removed</label>
+					<label class="ingredients__ListItemText" for="Ingredient03">1 head broccoli, stems removed</label>
 				</p>
 				<p>
 					<input type="checkbox" value="1 dozen mushrooms, sliced" data-type="list-item" id="Ingredient04">
-					<label class="o-Ingredients__a-ListItemText" for="Ingredient04">1 dozen mushrooms, sliced</label>
+					<label class="ingredients__ListItemText" for="Ingredient04">1 dozen mushrooms, sliced</label>
 				</p>
 				<p>
 					<input type="checkbox" value="3 carrots, peeled and julienned" data-type="list-item" id="Ingredient05">
-					<label class="o-Ingredients__a-ListItemText" for="Ingredient05">3 carrots, peeled and julienned</label>
+					<label class="ingredients__ListItemText" for="Ingredient05">3 carrots, peeled and julienned</label>
 				</p>
 				<p>
 					<input type="checkbox" value="1/4 pound green beans, diced" data-type="list-item" id="Ingredient06">
-					<label class="o-Ingredients__a-ListItemText" for="Ingredient06">1/4 pound green beans, diced</label>
+					<label class="ingredients__ListItemText" for="Ingredient06">1/4 pound green beans, diced</label>
 				</p>
 				<p>
 					<input type="checkbox" value="1 head bok choy, chopped" data-type="list-item" id="Ingredient07">
-					<label class="o-Ingredients__a-ListItemText" for="Ingredient07">1 head bok choy, chopped</label>
+					<label class="ingredients__ListItemText" for="Ingredient07">1 head bok choy, chopped</label>
 				</p>
 				<p>
 					<input type="checkbox" value="2 to 3 tablespoons teriyaki sauce" data-type="list-item" id="Ingredient08">
-					<label class="o-Ingredients__a-ListItemText" for="Ingredient08">2 to 3 tablespoons teriyaki sauce</label>
+					<label class="ingredients__ListItemText" for="Ingredient08">2 to 3 tablespoons teriyaki sauce</label>
 				</p>
 			</ul>
+				<div class="RecipeBoxCheckout" data-module="recipe-shopping-list" id="mod-recipe-shopping-list-1">
+              		<a href="#" class="RecipeBoxCheckout__Button" data-type="list-action">Add Checked Items to Grocery List</a>
+          		</div>
 		</div>
 	</div>
 
 	<div class="row">
 	 	<div class="col-md-8">
+	 		<strong>Total Prep/Cooking Time: </strong>
+  				<%= @recipe.total_time %>
+
 			<div class="recipe_instructions">
-				<p>Instructions:</p>
-				<p>Heat 1 tablespoon oil in a saute pan over medium heat. Add garlic and stir. Place the chicken in the pan and brown 4 minutes on each side. Remove from pan, slice into strips, set aside.</p>
-				<p>Heat remaining tablespoon of oil in a wok over high heat. Add the vegetables and teriyaki sauce. Stir-fry quickly until the vegetables begin to soften. Add the chicken strips, combine well and continue to cook for 2 to 3 minutes. Serve immediately.</p>
-			</div>
-	  	</div>
+				<strong>Instructions: </strong>
+  				<%= @recipe.instructions %>
+	  		</div>
+		</div>
 	</div>
 </div>
+
+
+
