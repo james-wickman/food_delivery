@@ -3,6 +3,7 @@ class RecipesController < ApplicationController
   end
 
   def show
+
   end
 
   def edit
@@ -18,5 +19,15 @@ class RecipesController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def set_recipe
+    @recipe = Recipe.find(params[:id])
+  end
+
+  def recipe_params
+    params.require(:user).permit(:title, :total_time, :instructions)
   end
 end
