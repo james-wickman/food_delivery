@@ -55,6 +55,7 @@ before_action :configure_account_update_params, only: [:update]
 
   # The path used after sign up for inactive accounts.
   def after_inactive_sign_up_path_for(resource)
-    users_show_path
+    root_path
   end
+  
 end
