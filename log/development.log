@@ -1,3 +1,187 @@
 
 
 
+Started GET "/" for 127.0.0.1 at 2017-02-21 11:32:55 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.1ms)
+Started GET "/" for 127.0.0.1 at 2017-02-21 11:32:56 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered users/shared/_links.html.erb (1.4ms)
+  Rendered users/sessions/_new.html.erb (30.6ms)
+  Rendered users/shared/_links.html.erb (0.3ms)
+  Rendered users/registrations/_new.html.erb (3.2ms)
+Completed 200 OK in 842ms (Views: 817.4ms | ActiveRecord: 0.8ms)
+
+
+  Rendered users/shared/_links.html.erb (1.6ms)
+  Rendered users/sessions/_new.html.erb (8.0ms)
+  Rendered users/shared/_links.html.erb (0.4ms)
+  Rendered users/registrations/_new.html.erb (9.2ms)
+Completed 200 OK in 414ms (Views: 412.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ingredients/new" for 127.0.0.1 at 2017-02-21 11:33:01 -0700
+Processing by IngredientsController#new as HTML
+  Rendering ingredients/new.html.erb within layouts/application
+  Rendered ingredients/new.html.erb within layouts/application (1.5ms)
+  Rendered users/shared/_links.html.erb (2.2ms)
+  Rendered users/sessions/_new.html.erb (9.1ms)
+  Rendered users/shared/_links.html.erb (3.4ms)
+  Rendered users/registrations/_new.html.erb (19.1ms)
+Completed 200 OK in 131ms (Views: 127.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ingredients/new" for 127.0.0.1 at 2017-02-21 11:37:29 -0700
+Processing by IngredientsController#new as HTML
+  Rendering ingredients/new.html.erb within layouts/application
+  Rendered ingredients/new.html.erb within layouts/application (0.4ms)
+  Rendered users/shared/_links.html.erb (1.8ms)
+  Rendered users/sessions/_new.html.erb (6.2ms)
+  Rendered users/shared/_links.html.erb (0.6ms)
+  Rendered users/registrations/_new.html.erb (19.8ms)
+Completed 200 OK in 226ms (Views: 224.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ingredients/new" for 127.0.0.1 at 2017-02-21 11:37:47 -0700
+Processing by IngredientsController#new as HTML
+  Rendering ingredients/new.html.erb within layouts/application
+  Rendered ingredients/new.html.erb within layouts/application (2.5ms)
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/sessions/_new.html.erb (3.1ms)
+  Rendered users/shared/_links.html.erb (0.3ms)
+  Rendered users/registrations/_new.html.erb (4.4ms)
+Completed 200 OK in 538ms (Views: 532.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ingredients/new" for 127.0.0.1 at 2017-02-21 11:39:33 -0700
+Processing by IngredientsController#new as HTML
+  Rendering ingredients/new.html.erb within layouts/application
+  Rendered ingredients/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 255ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: [stdin]:6:19: reserved word 'function'):
+     5:     <%= csrf_meta_tags %>
+     6:     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___354473146041246421_69961327471640'
+  Rendering /home/jonathan/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/jonathan/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/jonathan/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.6ms)
+  Rendering /home/jonathan/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/jonathan/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /home/jonathan/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/jonathan/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/jonathan/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.3ms)
+Started GET "/ingredients/new" for 127.0.0.1 at 2017-02-21 11:39:40 -0700
+Processing by IngredientsController#new as HTML
+  Rendering ingredients/new.html.erb within layouts/application
+  Rendered ingredients/new.html.erb within layouts/application (0.8ms)
+  Rendered users/shared/_links.html.erb (0.8ms)
+  Rendered users/sessions/_new.html.erb (3.2ms)
+  Rendered users/shared/_links.html.erb (0.2ms)
+  Rendered users/registrations/_new.html.erb (2.6ms)
+Completed 200 OK in 416ms (Views: 409.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ingredients/new" for 127.0.0.1 at 2017-02-21 11:39:47 -0700
+Processing by IngredientsController#new as HTML
+  Rendering ingredients/new.html.erb within layouts/application
+  Rendered ingredients/new.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 339ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (SyntaxError: [stdin]:6:19: reserved word 'function'):
+     5:     <%= csrf_meta_tags %>
+     6:     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___354473146041246421_69961647787780'
+  Rendering /home/jonathan/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/jonathan/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/jonathan/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.0ms)
+  Rendering /home/jonathan/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/jonathan/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/jonathan/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/jonathan/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/jonathan/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.7ms)
+Started GET "/ingredients/new" for 127.0.0.1 at 2017-02-21 11:40:45 -0700
+Processing by IngredientsController#new as HTML
+  Rendering ingredients/new.html.erb within layouts/application
+  Rendered ingredients/new.html.erb within layouts/application (1.1ms)
+  Rendered users/shared/_links.html.erb (0.9ms)
+  Rendered users/sessions/_new.html.erb (3.5ms)
+  Rendered users/shared/_links.html.erb (0.3ms)
+  Rendered users/registrations/_new.html.erb (3.2ms)
+Completed 200 OK in 323ms (Views: 321.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ingredients/show" for 127.0.0.1 at 2017-02-21 11:58:06 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IngredientsController#show as HTML
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `client' for #<IngredientsController:0x000000029228e8>):
+  
+app/controllers/ingredients_controller.rb:6:in `show'
+  Rendering /home/jonathan/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/jonathan/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/jonathan/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.0ms)
+  Rendering /home/jonathan/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/jonathan/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendering /home/jonathan/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/jonathan/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/jonathan/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (93.8ms)
+Started GET "/ingredients/show" for 127.0.0.1 at 2017-02-21 11:58:43 -0700
+Processing by IngredientsController#show as HTML
+  Rendering ingredients/show.html.erb within layouts/application
+  Rendered ingredients/show.html.erb within layouts/application (1.4ms)
+  Rendered users/shared/_links.html.erb (1.6ms)
+  Rendered users/sessions/_new.html.erb (39.7ms)
+  Rendered users/shared/_links.html.erb (1.8ms)
+  Rendered users/registrations/_new.html.erb (11.4ms)
+Completed 200 OK in 417ms (Views: 414.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/ingredients/show" for 127.0.0.1 at 2017-02-21 12:01:46 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/jonathan/Documents/dev/ruby/intro_to_rails/food_delivery/app/controllers/application_controller.rb:4)
+Processing by IngredientsController#show as HTML
+  Rendering ingredients/show.html.erb within layouts/application
+  Rendered ingredients/show.html.erb within layouts/application (1.0ms)
+  Rendered users/shared/_links.html.erb (1.1ms)
+  Rendered users/sessions/_new.html.erb (32.1ms)
+  Rendered users/shared/_links.html.erb (0.2ms)
+  Rendered users/registrations/_new.html.erb (2.6ms)
+Completed 200 OK in 336ms (Views: 320.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/ingredients/show" for 127.0.0.1 at 2017-02-21 12:03:00 -0700
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /home/jonathan/Documents/dev/ruby/intro_to_rails/food_delivery/app/controllers/application_controller.rb:4)
+Processing by IngredientsController#show as HTML
+  Rendering ingredients/show.html.erb within layouts/application
+  Rendered ingredients/show.html.erb within layouts/application (0.6ms)
+  Rendered users/shared/_links.html.erb (1.0ms)
+  Rendered users/sessions/_new.html.erb (39.8ms)
+  Rendered users/shared/_links.html.erb (0.3ms)
+  Rendered users/registrations/_new.html.erb (2.8ms)
+Completed 200 OK in 1063ms (Views: 122.1ms | ActiveRecord: 1.1ms)
+
+

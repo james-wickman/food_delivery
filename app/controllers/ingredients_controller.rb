@@ -3,7 +3,8 @@ class IngredientsController < ApplicationController
   end
 
   def show
-  end
+    p @client.search("ipod")
+  end 
 
   def edit
   end
