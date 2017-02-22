@@ -12,9 +12,12 @@
   <body>
     
     <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+      
       <a class="navbar-brand" href="#">Logo</a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="nav justify-content-end">
+      <ul class="nav navbar-nav mr-auto">
+      </ul>
+        <ul class="nav">   
           <% if !user_signed_in? %>
             <div class="nav-item ">
               <ul class="dropdown test">
@@ -22,43 +25,60 @@
                 <div class="dropdown-menu" id="dropdown_menu1" aria-labelledby="dropdownMenuButton">
                   <div class="card" style="width: 20rem;">
                     <div class="card-block">
-                      <ul class="nav nav-tabs">
+                      <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
-                          <button class="user_toggle_login">User</button>
+                          <a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home">Users</a>
                         </li>
                         <li class="nav-item">
-                          <button class="driver_toggle_login">Driver</button>
+                          <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Drivers</a>
                         </li>
                       </ul>
-                      <%= render 'users/sessions/new' %>
+                      <div class="tab-content">
+                        <div class="tab-pane active" id="home" role="tabpanel"><%= render 'users/sessions/new' %></div>
+                        <div class="tab-pane" id="profile" role="tabpanel"><%= render 'drivers/sessions/new' %></div>
+                      </div>
+                      <script>
+                        $(function () {
+                          $('#myTab a:first').tab('show')
+                        })
+                      </script>
                     </div>
                   </div>
                 </div>
               </ul>
             </div>
             <div class="nav-item">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sign Up</button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <div class="card" style="width: 20rem;">
-                  <div class="card-block">
-                    <ul class="nav nav-tabs">
-                      <li class="nav-item">
-                        <button class="user_toggle_login">User</button>
-                      </li>
-                      <li class="nav-item">
-                        <button class="driver_toggle_login">Driver</button>
-                      </li>
-                    </ul>
-                    <%= render 'users/registrations/new' %>
+              <ul class="dropdown test1">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" aria-haspopup="true" aria-expanded="false">Sign Up</button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton1">
+                  <div class="card" style="width: 20rem;">
+                    <div class="card-block">
+                      <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home">Users</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Drivers</a>
+                        </li>
+                      </ul>
+                      <div class="tab-content">
+                        <div class="tab-pane active" id="home" role="tabpanel"><%= render 'users/registrations/new' %></div>
+                        <div class="tab-pane" id="profile" role="tabpanel"><%= render 'drivers/registrations/new' %></div>
+                      </div>
+                      <script>
+                        $(function () {
+                          $('#myTab a:first').tab('show')
+                        })
+                      </script>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </ul>
             </div>
             <% else %>
               <div class="nav-item">
                 <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
               </div>
-            
             </div>
           <% end %>
         </ul>
