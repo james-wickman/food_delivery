@@ -10,15 +10,27 @@ class OrderController < ApplicationController
     @div_id = params[:name]
     @order = Order.new(order_params)
     @ingredient = Ingredient.new(ingredient_params)
-    if @ingredient.save
-      if @order.save
-        @order_ingredient = OrderIngredient.new(order_id: @order.id, ingredient_id: @ingredient.id, quantity: 1)
-        if @order_ingredient.save
-          respond_to do |format|
-            format.js
-          end        
+    if Ingredient.where(name: @ingredient.name).any?
+      @ingredient = Ingredient.where(name: @ingredient.name).first
+        if @order.save
+          @order_ingredient = OrderIngredient.new(order_id: @order.id, ingredient_id: @ingredient.id, quantity: 1)
+          if @order_ingredient.save
+            respond_to do |format|
+              format.js
+            end        
+          end 
         end 
-      end   
+    else
+      if @ingredient.save
+        if @order.save
+          @order_ingredient = OrderIngredient.new(order_id: @order.id, ingredient_id: @ingredient.id, quantity: 1)
+          if @order_ingredient.save
+            respond_to do |format|
+              format.js
+            end        
+          end 
+        end   
+      end
     end
   end
 
