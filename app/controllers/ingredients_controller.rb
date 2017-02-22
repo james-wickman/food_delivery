@@ -3,7 +3,7 @@ class IngredientsController < ApplicationController
   end
 
   def show
-
+    
   end 
 
   def edit

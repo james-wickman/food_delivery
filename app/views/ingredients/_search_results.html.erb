@@ -1,4 +1,6 @@
 <% @result.items.each do |item| %>
 	<div>
-		<span><%= item.name %> </span> <span> <%= item.price %></span> <%= link_to "Add to grocery list", order_index_path(user_id: current_user), method: :post, remote: true %>
+		<span><%= item.name %> </span> <span> <%= item.price %></span> 
+		<span id="<%=item.name.gsub(/[^0-9A-Za-z]/, '')%>"><%= link_to "Add to grocery list", order_index_path(user_id: current_user.id, name: item.name, walmart_id: item.upc), method: :post, remote: true %></span>
+		
 <% end %>
