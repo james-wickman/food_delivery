@@ -6,6 +6,6 @@ console.log('js loaded')
 $(document).ready(function(){
 	$('#dropdownMenuButton').on('click', function (event) {
 		console.log("ran")
-	    $('#dropdown_menu1').addClass('show');
+	    $('.test').toggleClass('show');
 	});
 });
