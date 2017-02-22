@@ -11,6 +11,7 @@ class OrderController < ApplicationController
     @div_id = params[:name]
     @order = Order.new(order_params)
     @ingredient = Ingredient.new(ingredient_params)
+    p @order.foreign_key_exists?(:orders, column: :driver_id)
     byebug
     if @ingredient.save
       if @order.save
