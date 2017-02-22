@@ -18,7 +18,7 @@
       <ul class="nav navbar-nav mr-auto">
       </ul>
         <ul class="nav">   
-          <% if !user_signed_in? %>
+          <% if !user_signed_in? && !driver_signed_in?%>
             <div class="nav-item ">
               <ul class="dropdown test">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"  aria-haspopup="true" aria-expanded="false">Log In</button>
@@ -27,15 +27,15 @@
                     <div class="card-block">
                       <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
-                          <a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home">Users</a>
+                          <a class="nav-link active" data-toggle="tab" href="#users_login" role="tab" aria-controls="users_login">Users</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Drivers</a>
+                          <a class="nav-link" data-toggle="tab" href="#drivers_login" role="tab" aria-controls="drivers_login">Drivers</a>
                         </li>
                       </ul>
                       <div class="tab-content">
-                        <div class="tab-pane active" id="home" role="tabpanel"><%= render 'users/sessions/new' %></div>
-                        <div class="tab-pane" id="profile" role="tabpanel"><%= render 'drivers/sessions/new' %></div>
+                        <div class="tab-pane active" id="users_login" role="tabpanel"><%= render 'users/sessions/new' %></div>
+                        <div class="tab-pane" id="drivers_login" role="tabpanel"><%= render 'drivers/sessions/new' %></div>
                       </div>
                       <script>
                         $(function () {
@@ -55,15 +55,15 @@
                     <div class="card-block">
                       <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
-                          <a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home">Users</a>
+                          <a class="nav-link active" data-toggle="tab" href="#users_signup" role="tab" aria-controls="users_signup">Users</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Drivers</a>
+                          <a class="nav-link" data-toggle="tab" href="#drivers_signup" role="tab" aria-controls="drivers_signup">Drivers</a>
                         </li>
                       </ul>
                       <div class="tab-content">
-                        <div class="tab-pane active" id="home" role="tabpanel"><%= render 'users/registrations/new' %></div>
-                        <div class="tab-pane" id="profile" role="tabpanel"><%= render 'drivers/registrations/new' %></div>
+                        <div class="tab-pane active" id="users_signup" role="tabpanel"><%= render 'users/registrations/new' %></div>
+                        <div class="tab-pane" id="drivers_signup" role="tabpanel"><%= render 'drivers/registrations/new' %></div>
                       </div>
                       <script>
                         $(function () {
@@ -75,12 +75,16 @@
                 </div>
               </ul>
             </div>
-            <% else %>
+            <% elsif !driver_signed_in? %>
               <div class="nav-item">
                 <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
               </div>
-            </div>
-          <% end %>
+            <% elsif !user_signed_in? %>
+              <div class="nav-item">
+                <li><%= link_to "Log out", destroy_driver_session_path, method: :delete %></li>
+              </div>
+              <% end %>
+          </div>
         </ul>
       </div>
     </nav>
