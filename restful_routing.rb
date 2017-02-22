@@ -1,4 +1,7 @@
                     Prefix Verb   URI Pattern                            Controller#Action
+              sessions_new GET    /sessions/new(.:format)                sessions#new
+           sessions_create GET    /sessions/create(.:format)             sessions#create
+          sessions_destroy GET    /sessions/destroy(.:format)            sessions#destroy
          order_ingredients GET    /order_ingredients(.:format)           order_ingredients#index
                            POST   /order_ingredients(.:format)           order_ingredients#create
       new_order_ingredient GET    /order_ingredients/new(.:format)       order_ingredients#new
