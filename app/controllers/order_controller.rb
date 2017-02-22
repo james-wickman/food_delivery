@@ -9,6 +9,7 @@ class OrderController < ApplicationController
   end
 
   def show
+    @order = Order.find(1)
   end
 
   def edit
