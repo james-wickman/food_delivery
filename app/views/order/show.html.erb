@@ -1,2 +1,6 @@
 <h1>Order#show</h1>
 <p>Find me in app/views/order/show.html.erb</p>
+
+<% @order.ingredients.each do |ingredient| %>
+	<%= ingredient.name %>
+<% end %>
