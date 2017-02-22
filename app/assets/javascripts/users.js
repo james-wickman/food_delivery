@@ -2,12 +2,10 @@
 // # All this logic will automatically be available in application.js.
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 
-
-$('#collapseExample1').on('click', function() {
-    $('#collapseExample').toggle()
-  }
-);
-
-$('#collapseExample').on('click',function() {
-		$('#collapseExample1').toggle()
+console.log('js loaded')
+$(document).ready(function(){
+	$('#dropdownMenuButton').on('click', function (event) {
+		console.log("ran")
+	    $('.test').toggleClass('show');
 	});
+});
