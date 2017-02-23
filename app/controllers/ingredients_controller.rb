@@ -3,7 +3,6 @@ class IngredientsController < ApplicationController
   end
 
   def show
-    
   end 
 
   def edit
@@ -11,10 +10,10 @@ class IngredientsController < ApplicationController
 
   def create
     @result = @client.search(params[:query], {categoryId: 976759})
+    p @result
     respond_to do |format|
       format.js 
     end
-    p @result.items[0].price
   end
 
   def update
