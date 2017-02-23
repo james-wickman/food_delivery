@@ -7,10 +7,15 @@ class OrderController < ApplicationController
   end
 
   def create
-    @div_id = params[:name]
-    @order = Order.new(order_params)
     @current_user = current_user
+    @order = Order.new(order_params)
     @ingredient = Ingredient.new(ingredient_params)
+    @search_page = false
+    @div_id = "nothing"
+    if params[:name]
+      @search_page = true
+      @div_id = params[:name]    
+    end
     if current_user
       if Ingredient.where(name: @ingredient.name).any?
         @ingredient = Ingredient.where(name: @ingredient.name).first

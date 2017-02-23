@@ -83,8 +83,9 @@ ActiveRecord::Schema.define(version: 20170223211437) do
     t.string   "title"
     t.integer  "total_time"
     t.text     "instructions"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "ingredient_array"
   end
 
   create_table "sessions", force: :cascade do |t|
