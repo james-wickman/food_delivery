@@ -22,11 +22,13 @@ Rails.application.routes.draw do
   get 'users/show'
   
   devise_for :users, controllers: {
-    sessions: 'users/sessions'
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
   }
 
   devise_for :drivers, controllers: {
-    sessions: 'drivers/sessions'
+    sessions: 'drivers/sessions',
+    registrations: 'drivers/registrations'
   }
 
   root to: "home#index"

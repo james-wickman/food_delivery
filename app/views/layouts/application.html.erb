@@ -4,21 +4,22 @@
     <title>FoodDelivery</title>
     <%= csrf_meta_tags %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
-
   <body>
-    
     <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-      
       <a class="navbar-brand" href="#">Logo</a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="nav navbar-nav mr-auto">
       </ul>
         <ul class="nav ">   
           <% if !user_signed_in? && !driver_signed_in?%>
+          <div class="nav-item">
+              <button class="btn btn-secondary"><%= link_to "Home", root_path %></button>
+            </div>
             <div class="nav-item">
               <button class="btn btn-secondary"><%= link_to "Recipes", recipes_path %></button>
             </div>
@@ -78,7 +79,14 @@
                 </div>
               </ul>
             </div>
-            <% elsif !driver_signed_in? %>
+            <% elsif !user_signed_in? %>
+                <div class="nav-item">
+                  <button class="btn btn-secondary"><%= link_to "Home", driver_session_path %></button>
+                </div>
+              <div class="nav-item">
+                <button class="btn btn-secondary"><%= link_to "Log out", destroy_driver_session_path, method: :delete %></button>
+              </div>
+              <% else %>
               <div class="nav-item">
                 <button class="btn btn-secondary"><%= link_to "Home", user_session_path %></button>
               </div>
@@ -91,13 +99,6 @@
               <div class="nav-item">
                 <button class="btn btn-secondary"><%= link_to "Log out", destroy_user_session_path, method: :delete %></button>
               </div>
-            <% elsif !user_signed_in? %>
-                <div class="nav-item">
-                  <button class="btn btn-secondary"><%= link_to "Home", driver_session_path %></button>
-                </div>
-              <div class="nav-item">
-                <button class="btn btn-secondary"><%= link_to "Log out", destroy_driver_session_path, method: :delete %></button>
-              </div>
               <% end %>
           </div>
         </ul>
@@ -108,9 +109,9 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
-    
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
   </body>
 </html>
