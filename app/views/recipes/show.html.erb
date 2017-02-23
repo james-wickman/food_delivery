@@ -2,75 +2,24 @@
 <p>Find me in app/views/recipes/show.html.erb</p>
 <div class="container-fluid">
 	<div class="row">
-	<h3 class="title">
-		<strong>Title:</strong>
-		<%= @recipe.title %>
-	</h3>
+		<h3 class="title">
+			<strong>Title:</strong>
+			<%= @recipe.title %>
+		</h3>
 		<div class="col-md-6"><%= image_tag("chicken_stir_fry.jpeg") %></div>
-		<div class="col-md-6"><h3 class="title">Ingredient List</h3>
-
-			<!-- <ul class="recipe_list_items"> -->
-
-				<%= form_tag(order_index_path, remote: true) do %>
-					<% @recipe.ingredients.each do |ingredient| %>
-						<p>
-							<input type="checkbox" value="#<%= ingredient.id %>" id="#<%= ingredient.name.gsub(/[^0-9A-Za-z]/, '') %>">
-							<label for="Ingredient00">2 tablespoons dark sesame oil, divided</label>
-						</p>					
-					<% end %>					
+		<div class="col-md-6">
+			<h3 class="title">Ingredient List</h3>
+			<%= form_tag(order_index_path, remote: true) do %>
+				<% for i in 0..@ingredient_list.length-1 %>
+					<p>
+						<input type="checkbox" name="ingredient_id" value="<%= @recipe.ingredients[i].id %>" id="#<%= @recipe.ingredients[i].name.gsub(/[^0-9A-Za-z]/, '') %>">
+						<label for="<%= @recipe.ingredients[i].name.gsub(/[^0-9A-Za-z]/, '') %>"><%= @ingredient_list[i] %></label>
+					</p>
 				<% end %>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-				<!-- <p>
-					<input type="checkbox" value="2 garlic cloves, finely minced" data-type="list-item" id="Ingredient01">
-					<label class="ingredients__ListItemText" for="Ingredient01">2 garlic cloves, finely minced</label>
-				</p>
-				<p>
-					<input type="checkbox" value="2 pounds chicken breasts, skinless and boneless" data-type="list-item" id="Ingredient02">
-					<label class="ingredients__ListItemText" for="Ingredient02">2 pounds chicken breasts, skinless and boneless</label>
-				</p>
-				<p>
-					<input type="checkbox" value="1 head broccoli, stems removed" data-type="list-item" id="Ingredient03">
-					<label class="ingredients__ListItemText" for="Ingredient03">1 head broccoli, stems removed</label>
-				</p>
-				<p>
-					<input type="checkbox" value="1 dozen mushrooms, sliced" data-type="list-item" id="Ingredient04">
-					<label class="ingredients__ListItemText" for="Ingredient04">1 dozen mushrooms, sliced</label>
-				</p>
-				<p>
-					<input type="checkbox" value="3 carrots, peeled and julienned" data-type="list-item" id="Ingredient05">
-					<label class="ingredients__ListItemText" for="Ingredient05">3 carrots, peeled and julienned</label>
-				</p>
-				<p>
-					<input type="checkbox" value="1/4 pound green beans, diced" data-type="list-item" id="Ingredient06">
-					<label class="ingredients__ListItemText" for="Ingredient06">1/4 pound green beans, diced</label>
-				</p>
-				<p>
-					<input type="checkbox" value="1 head bok choy, chopped" data-type="list-item" id="Ingredient07">
-					<label class="ingredients__ListItemText" for="Ingredient07">1 head bok choy, chopped</label>
-				</p>
-				<p>
-					<input type="checkbox" value="2 to 3 tablespoons teriyaki sauce" data-type="list-item" id="Ingredient08">
-					<label class="ingredients__ListItemText" for="Ingredient08">2 to 3 tablespoons teriyaki sauce</label>
-				</p>
-			</ul>
-				<div class="RecipeBoxCheckout" data-module="recipe-shopping-list" id="mod-recipe-shopping-list-1">
-              		<a href="#" class="RecipeBoxCheckout__Button" data-type="list-action">Add Checked Items to Grocery List</a>
-          		</div>
+				<%= submit_tag "Add to grocery list" %>
+			<% end %>
 		</div>
-	</div> -->
+	</div>
 
 	<div class="row">
 	 	<div class="col-md-8">

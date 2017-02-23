@@ -4,6 +4,8 @@ class RecipesController < ApplicationController
 
   def show
     set_recipe
+    @ingredient_list = set_recipe.ingredient_array.split(",")
+    @index = 0 
   end
 
   def edit
