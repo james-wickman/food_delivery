@@ -1,5 +1,16 @@
 class RecipesController < ApplicationController
   def index
+    if params[:title]
+      @recipes = Recipe.search(params[:title]).order("created_at DESC")
+    else
+      @recipes = Recipe.all.order("created_at DESC")
+    end
+    respond_to do |format|
+      format.html
+      format.js
+    end
+    p params
+    p @recipes
   end
 
   def show
