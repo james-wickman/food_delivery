@@ -9,15 +9,16 @@
 		<div class="col-md-6"><%= image_tag("chicken_stir_fry.jpeg") %></div>
 		<div class="col-md-6">
 			<h3 class="title">Ingredient List</h3>
-			<%= form_tag(order_index_path, remote: true) do %>
-				<% for i in 0..@ingredient_list.length-1 %>
-					<p>
-						<input type="checkbox" name="ingredient_id" value="<%= @recipe.ingredients[i].id %>" id="#<%= @recipe.ingredients[i].name.gsub(/[^0-9A-Za-z]/, '') %>">
-						<label for="<%= @recipe.ingredients[i].name.gsub(/[^0-9A-Za-z]/, '') %>"><%= @ingredient_list[i] %></label>
-					</p>
-				<% end %>
-				<%= submit_tag "Add to grocery list" %>
-			<% end %>
+
+			<ul>
+				<% @recipe.recipe_ingredients.each do |recipe_ingredient| %>
+					<div>
+						<button><%= link_to "+", order_index_path(ingredient_id: recipe_ingredient.ingredient_id), remote: true, method: :post %></button>
+						<%= recipe_ingredient.measurement %>
+						</div>
+				<% end %>	
+			</ul>
+
 		</div>
 	</div>
 
