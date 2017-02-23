@@ -4,7 +4,6 @@ class CustomFailure < Devise::FailureApp
   end
 
   def respond
-  	byebug
     if http_auth?
       http_auth
     else
