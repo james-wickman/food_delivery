@@ -65,7 +65,7 @@ class OrderController < ApplicationController
   end
 
   def show
-    @order = Order.find(1)
+    @order = Order.find(params[:id])
   end
 
   def edit

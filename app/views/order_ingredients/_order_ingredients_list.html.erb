@@ -1,0 +1,8 @@
+<ul>
+	<% @order.order_ingredients.each do |order_ingredient| %>
+		<li>
+			<%= order_ingredient.ingredient.name %>
+			<%= link_to "Remove", order_ingredient_path(id: order_ingredient.id), method: :delete, remote: true %>
+		</li>
+	<% end %>	
+</ul>

@@ -1,5 +1,6 @@
 class OrderIngredientsController < ApplicationController
   def index
+    @order = current_order
   end
 
   def new
@@ -18,5 +19,12 @@ class OrderIngredientsController < ApplicationController
   end
 
   def destroy
+    @order = current_order
+    @order_ingredient = OrderIngredient.find(params[:id])
+    if @order_ingredient.destroy
+      respond_to do |format|
+        format.js
+      end
+    end
   end
 end
