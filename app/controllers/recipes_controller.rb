@@ -3,7 +3,7 @@ class RecipesController < ApplicationController
   end
 
   def show
-
+    set_recipe
   end
 
   def edit
