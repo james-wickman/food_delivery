@@ -24,7 +24,6 @@ before_action :configure_sign_in_params, only: [:create]
   end
 
   def after_sign_in_path_for(resource)
-    byebug
     users_show_path
   end
 end
