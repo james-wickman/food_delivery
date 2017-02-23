@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170223003743) do
+ActiveRecord::Schema.define(version: 20170223174630) do
 
   create_table "drivers", force: :cascade do |t|
     t.string   "email",                      default: "", null: false
@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(version: 20170223003743) do
     t.integer  "ingredient_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "quantity"
     t.index ["ingredient_id"], name: "index_recipe_ingredients_on_ingredient_id"
     t.index ["recipe_id"], name: "index_recipe_ingredients_on_recipe_id"
   end
