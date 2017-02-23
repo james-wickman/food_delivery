@@ -9,8 +9,12 @@ class IngredientsController < ApplicationController
   end
 
   def create
+    if current_user
+      @current_user_id = current_user.id
+    else
+      @current_user_id = nil
+    end
     @result = @client.search(params[:query], {categoryId: 976759})
-    p @result
     respond_to do |format|
       format.js 
     end
