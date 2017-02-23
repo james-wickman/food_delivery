@@ -1,4 +1,5 @@
                     Prefix Verb   URI Pattern                            Controller#Action
+            drivers_update PUT    /drivers/update(.:format)              drivers#update
               sessions_new GET    /sessions/new(.:format)                sessions#new
            sessions_create GET    /sessions/create(.:format)             sessions#create
           sessions_destroy GET    /sessions/destroy(.:format)            sessions#destroy

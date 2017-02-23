@@ -1,3 +1,94 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+	height: 100%;
+
+}
+
+//Hero image at top of home page
+#header {
+    background-image: url(grocery_delivery.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    background-size: cover!important;
+    height: 600px;
+
+}
+
+#header::before {
+	content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: rgba(100,96,102,0.5);
+}
+
+#header_content{
+	text-align: center;
+	font-family: 'Alegreya Sans', sans-serif;
+    padding: 6rem 0;
+    color: rgba(255,255,255,1);
+    position: relative;
+    z-index: 10;
+}
+
+.h1, h1 {
+    font-size: 2.5rem;
+    padding: 40px;
+}
+
+.fontsans_big {
+	padding: 30px;
+}
+
+.content-padding .recipes {
+	padding: 3rem 0 1rem 0;
+}
+
+.row {
+	width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 73.75em;
+}
+
+.margin0 {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    padding: 60px;
+}
+
+.main_buttons {
+	padding: 40px;
+    border: 40px;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#view_recipes {
+	padding: 30px;
+    border: 10px;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 14pt;
+    color: #4a454c; 
+
+}
+
+.mission_full{
+	background-color: #C8FAEF;
+	margin: 0;
+
+}

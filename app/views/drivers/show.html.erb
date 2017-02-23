@@ -1,28 +1,54 @@
 
-<div>
+<div class="driver_info">
 <h1>Drivers#show</h1>
  
  <h3><%= @driver.email %></h3>
  <h3><%= @driver.first_name %>
  <%= @driver.last_name %></h3>
-
+ 
 </div>
 <div class="drivers_settings">
 	 <ul class="nav nav-tabs" id="myTab" role="tablist">
 	    <li class="nav-item">
-	      <a class="nav-link active" data-toggle="tab" href="#not_ready" role="tab" aria-controls="not_ready">Not Ready</a>
+	      <a class="nav-link active" data-toggle="tab" href="#not_ready" role="tab" aria-controls="not_ready">Main</a>
 	    </li>
-	    <li class="nav-item">
-	      <a class="nav-link" data-toggle="tab" href="#ready_up" role="tab" aria-controls="ready_up">Ready Up</a>
-	    </li>
-	  
 	  	<li class="nav-item">
 	      <a class="nav-link" data-toggle="tab" href="#edit_profile" role="tab" aria-controls="edit_profile">Edit Profile</a>
 	    </li>
 	   </ul>
 	  <div class="tab-content">
-	    <div class="tab-pane active" id="not_ready" role="tabpanel">I'm not Ready</div>
-	    <div class="tab-pane" id="ready_up" role="tabpanel">I'm so ready</div>
+	    <div class="tab-pane active" id="not_ready" role="tabpanel">
+	    	<div>
+			</div>
+	    	<input id="toggle-event" type="checkbox" data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger">
+	    	
+			<div id="console-event"></div>
+			<div class="order_holder hidden">
+				<div class="accept_order">
+					<% if @order != nil %>
+						one job available in <%= @order.user.city %>
+						<button class="accept_order">Accept</button>
+					<% else %>
+						Nothing is available right now.
+					<% end %>
+				</div>
+				<div class="order hidden">
+					<%if @order != nil %>
+						<%= @order.user.first_name %>
+						<%= @order.user.last_name %> <br>
+						<%= @order.user.phone_number %><br>
+						<%= @order.user.address %> <br>
+						<%= @order.user.city %>
+						<%= @order.user.state %> <br>
+						<%= @order.user.zip %> <hr>
+						<% @ingredients.each do |ingredient| %>
+							<%= ingredient.name %>
+						<% end %>
+						<button class="complete_order">Complete</button>
+					<% end %>
+				</div>
+			</div>
+	    </div>
 	    <div class="tab-pane" id="edit_profile" role="tabpanel"><%= render 'drivers/registrations/edit' %></div>
 	  </div>
 	  <script>
@@ -30,6 +56,7 @@
 	      $('#myTab a:first').tab('show')
 	    })
 	  </script>
+	
 
 </div>
 	

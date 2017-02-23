@@ -1,3 +1,4 @@
-if ('<% @search_page != nil %>') {
+
+if ($("#<%=@div_id.gsub(/[^0-9A-Za-z]/, '')%>")) {
 	$("#<%=@div_id.gsub(/[^0-9A-Za-z]/, '')%>")[0].remove();
 }

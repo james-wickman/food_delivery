@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  put 'drivers/update'
+
   get 'sessions/new'
 
   get 'sessions/create'
@@ -34,4 +36,3 @@ Rails.application.routes.draw do
   root to: "home#index"
 
 end
- 
