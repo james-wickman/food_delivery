@@ -52,13 +52,13 @@
              user_password PATCH  /users/password(.:format)              devise/passwords#update
                            PUT    /users/password(.:format)              devise/passwords#update
                            POST   /users/password(.:format)              devise/passwords#create
-  cancel_user_registration GET    /users/cancel(.:format)                devise/registrations#cancel
-     new_user_registration GET    /users/sign_up(.:format)               devise/registrations#new
-    edit_user_registration GET    /users/edit(.:format)                  devise/registrations#edit
-         user_registration PATCH  /users(.:format)                       devise/registrations#update
-                           PUT    /users(.:format)                       devise/registrations#update
-                           DELETE /users(.:format)                       devise/registrations#destroy
-                           POST   /users(.:format)                       devise/registrations#create
+  cancel_user_registration GET    /users/cancel(.:format)                users/registrations#cancel
+     new_user_registration GET    /users/sign_up(.:format)               users/registrations#new
+    edit_user_registration GET    /users/edit(.:format)                  users/registrations#edit
+         user_registration PATCH  /users(.:format)                       users/registrations#update
+                           PUT    /users(.:format)                       users/registrations#update
+                           DELETE /users(.:format)                       users/registrations#destroy
+                           POST   /users(.:format)                       users/registrations#create
         new_driver_session GET    /drivers/sign_in(.:format)             drivers/sessions#new
             driver_session POST   /drivers/sign_in(.:format)             drivers/sessions#create
     destroy_driver_session DELETE /drivers/sign_out(.:format)            drivers/sessions#destroy
@@ -67,11 +67,11 @@
            driver_password PATCH  /drivers/password(.:format)            devise/passwords#update
                            PUT    /drivers/password(.:format)            devise/passwords#update
                            POST   /drivers/password(.:format)            devise/passwords#create
-cancel_driver_registration GET    /drivers/cancel(.:format)              devise/registrations#cancel
-   new_driver_registration GET    /drivers/sign_up(.:format)             devise/registrations#new
-  edit_driver_registration GET    /drivers/edit(.:format)                devise/registrations#edit
-       driver_registration PATCH  /drivers(.:format)                     devise/registrations#update
-                           PUT    /drivers(.:format)                     devise/registrations#update
-                           DELETE /drivers(.:format)                     devise/registrations#destroy
-                           POST   /drivers(.:format)                     devise/registrations#create
+cancel_driver_registration GET    /drivers/cancel(.:format)              drivers/registrations#cancel
+   new_driver_registration GET    /drivers/sign_up(.:format)             drivers/registrations#new
+  edit_driver_registration GET    /drivers/edit(.:format)                drivers/registrations#edit
+       driver_registration PATCH  /drivers(.:format)                     drivers/registrations#update
+                           PUT    /drivers(.:format)                     drivers/registrations#update
+                           DELETE /drivers(.:format)                     drivers/registrations#destroy
+                           POST   /drivers(.:format)                     drivers/registrations#create
                       root GET    /                                      home#index
