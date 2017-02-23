@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170223182246) do
+ActiveRecord::Schema.define(version: 20170223211437) do
 
   create_table "drivers", force: :cascade do |t|
     t.string   "email",                      default: "", null: false
@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(version: 20170223182246) do
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.integer  "quantity"
+    t.string   "measurement"
     t.index ["ingredient_id"], name: "index_recipe_ingredients_on_ingredient_id"
     t.index ["recipe_id"], name: "index_recipe_ingredients_on_recipe_id"
   end
