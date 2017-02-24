@@ -1,6 +1,8 @@
 // # Place all the behaviors and hooks related to the matching controller here.
 // # All this logic will automatically be available in application.js.
 // # You can use CoffeeScript in this file: http://coffeescript.org/
+
+
 $(document).ready(function() {
 	$.ajax({
         type: "PUT",
@@ -13,6 +15,9 @@ $(document).ready(function() {
     });
 })
 $(document).on('turbolinks:load', function() {
+	$('#ranger').on('change', function() {
+	  $('#target').text($('#ranger').val())
+	})
 	$('#dropdownMenuButton').on('click', function (event) {
 	    $('.test').toggleClass('show');
 	    $('.test1').removeClass('show');
@@ -58,7 +63,7 @@ $(document).on('turbolinks:load', function() {
 		$.ajax({
 	        type: "PUT",
 	        url: "/drivers/update",
-	        data: { driver: { available: true } },
+	        data: { driver: { available: false } },
 	        dataType: "string", // you want a difference between normal and ajax-calls, and json is standard
 	    	success: function(json){
 	        	console.log(valuesToSubmit, json);
