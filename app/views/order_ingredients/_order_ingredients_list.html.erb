@@ -1,26 +1,30 @@
 <ul>
-	<% if @order != nil %>
+	<div class="total_order">
+		<% if @order != nil %>
+			<% @order.order_ingredients.each do |order_ingredient| %>
+				<li>
+					<span>Ingredient: <%= order_ingredient.ingredient.name %></span>
+					<span>Price: <%= order_ingredient.ingredient.price %></span>
+					<span>Quantity: <%= order_ingredient.quantity %></span>
+					<%= link_to "Remove", order_ingredient_path(id: order_ingredient.id), method: :delete, remote: true %>
+				</li>
 
-		<% @order.order_ingredients.each do |order_ingredient| %>
-			<li>
-				<span>Ingredient: <%= order_ingredient.ingredient.name %></span>
-				<span>Price: <%= order_ingredient.ingredient.price %></span>
-				<span>Quantity: <%= order_ingredient.quantity %></span>
-				<%= link_to "Remove", order_ingredient_path(id: order_ingredient.id), method: :delete, remote: true %>
-			</li>
-
+			<% end %>
+			<% if @user.first_name == nil || @user.last_name == nil || @user.address == nil || @user.city == nil || @user.state == nil || @user.zip == nil || @user.phone_number == nil %>
+				<h3>Just so we know where to send everything please tell us more about yourself</h3>
+				<%= render "users/registrations/edit" %>
+			<% else %>
+				<div class="place_order_button">
+					<%= form_tag order_path(@order.id), method: :put do %>
+						<%= hidden_field_tag :available, value: true %>	
+						<%= submit_tag "Place Order" %>
+					<% end %>	
+				</div>
+			<% end %>
 		<% end %>
-		<% if @user.fist_name == nil || @user.last_name == nil || @user.address == nil || @user.city == nil || @user.state == nil || @user.zip == nil || @user.phone_number == nil %>
-			<h3>Just so we know where to send everything please tell us more about yourself</h3>
-			<%= render "users/registraations/edit" %>
-		<% else %>
-			<%= form_tag order_path(@order.id), method: :put do %>
-				<%= hidden_field_tag :available, value: true %>	
-				<%= submit_tag "Place Order" %>
-			<% end %>	
-		<% end %>
-	<% else %>
+	</div>
+	<div class="nothing_in_cart">
 		<h3>Nothing is in your cart right now</h3>
+	</div>
 
-	<% end %>
 </ul>
