@@ -9,12 +9,10 @@ class RecipesController < ApplicationController
       format.html
       format.js
     end
-    p params
-    p @recipes
   end
 
   def show
-    set_recipe
+    @recipe = Recipe.find(params[:id])
   end
 
   def edit
