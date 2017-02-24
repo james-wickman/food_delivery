@@ -75,6 +75,7 @@ class OrderController < ApplicationController
   def update
     @driver = current_driver
     @order = Order.find(params[:id])
+    session[:order_id] = nil
     if @order.update_attributes(order_params)
       if @driver != nil
         redirect_to "/drivers/show", notice: 'Order was successfully Completed.' 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170224172008) do
+ActiveRecord::Schema.define(version: 20170224185013) do
 
   create_table "drivers", force: :cascade do |t|
     t.string   "email",                      default: "", null: false
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20170224172008) do
 
   create_table "ingredients", force: :cascade do |t|
     t.string   "name"
-    t.integer  "price"
+    t.decimal  "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "walmart_id"
@@ -85,9 +85,8 @@ ActiveRecord::Schema.define(version: 20170224172008) do
     t.string   "title"
     t.integer  "total_time"
     t.text     "instructions"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-    t.string   "ingredient_array"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "sessions", force: :cascade do |t|
