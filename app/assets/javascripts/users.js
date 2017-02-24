@@ -3,17 +3,7 @@
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 
 
-$(document).ready(function() {
-	$.ajax({
-        type: "PUT",
-        url: "/drivers/update",
-        data: { driver: { available: false } },
-        dataType: "string", // you want a difference between normal and ajax-calls, and json is standard
-    	success: function(json){
-        	console.log(valuesToSubmit, json);
-        }
-    });
-})
+
 $(document).on('turbolinks:load', function() {
 	$('#ranger').on('change', function() {
 	  $('#target').text($('#ranger').val())
@@ -75,12 +65,12 @@ $(document).on('turbolinks:load', function() {
     	$('#console-event').html('Available: ' + $(this).prop('checked') + "<br>");
 	    var setAvailable = $(this).prop('checked');
 	    $('.order_holder').toggleClass('hidden');
-	  $.ajaxSetup({
-	    beforeSend: function( xhr ) {
-	      var token = $('meta[name="csrf-token"]').attr('content');
-	      if (token) xhr.setRequestHeader('X-CSRF-Token', token);
-	    }
-	  });
+		$.ajaxSetup({
+			beforeSend: function( xhr ) {
+				var token = $('meta[name="csrf-token"]').attr('content');
+				if (token) xhr.setRequestHeader('X-CSRF-Token', token);
+			}
+		});
 	    $.ajax({
 	        type: "PUT",
 	        url: "/drivers/update",
