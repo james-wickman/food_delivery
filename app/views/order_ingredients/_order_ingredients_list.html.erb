@@ -1,7 +1,9 @@
 <ul>
 	<% @order.order_ingredients.each do |order_ingredient| %>
 		<li>
-			<%= order_ingredient.ingredient.name %>
+			<span>Ingredient: <%= order_ingredient.ingredient.name %></span>
+			<span>Price: <%= order_ingredient.ingredient.price %></span>
+			<span>Quantity: <%= order_ingredient.quantity %></span>
 			<%= link_to "Remove", order_ingredient_path(id: order_ingredient.id), method: :delete, remote: true %>
 		</li>
 	<% end %>	
