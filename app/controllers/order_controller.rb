@@ -70,9 +70,17 @@ class OrderController < ApplicationController
   end
 
   def edit
+    
   end
 
   def update
+    @driver = current_driver
+    @order = Order.find(params[:id])
+    if @order.update_attributes(order_params)
+      if @driver != nil
+        redirect_to "/drivers/show", notice: 'Order was successfully Completed.' 
+      end
+    end
   end
 
   def destroy
@@ -81,7 +89,7 @@ class OrderController < ApplicationController
   private
 
   def order_params
-    params.permit(:user_id, :driver_id)
+    params.require(:order).permit(:user_id, :driver_id, :completed)
   end
 
   def ingredient_params
