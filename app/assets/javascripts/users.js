@@ -63,12 +63,12 @@ $(document).on('turbolinks:load', function() {
     	$('#console-event').html('Available: ' + $(this).prop('checked') + "<br>");
 	    var setAvailable = $(this).prop('checked');
 	    $('.order_holder').toggleClass('hidden');
-	  $.ajaxSetup({
-	    beforeSend: function( xhr ) {
-	      var token = $('meta[name="csrf-token"]').attr('content');
-	      if (token) xhr.setRequestHeader('X-CSRF-Token', token);
-	    }
-	  });
+		$.ajaxSetup({
+			beforeSend: function( xhr ) {
+				var token = $('meta[name="csrf-token"]').attr('content');
+				if (token) xhr.setRequestHeader('X-CSRF-Token', token);
+			}
+		});
 	    $.ajax({
 	        type: "PUT",
 	        url: "/drivers/update",

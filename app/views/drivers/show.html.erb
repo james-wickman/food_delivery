@@ -54,6 +54,17 @@
 	    $(function () {
 	      $('#myTab a:first').tab('show')
 	    })
+	    $(document).ready(function() {
+			$.ajax({
+		        type: "PUT",
+		        url: "/drivers/update",
+		        data: { driver: { available: false } },
+		        dataType: "string", // you want a difference between normal and ajax-calls, and json is standard
+		    	success: function(json){
+		        	console.log(valuesToSubmit, json);
+		        }
+		    });
+		})
 	  </script>
 	
 
