@@ -14,25 +14,25 @@
 		Add the vegetables and teriyaki sauce. Stir-fry quickly until the vegetables begin to soften. 
 		Add the chicken strips, combine well and continue to cook for 2 to 3 minutes. Serve immediately.))
 
-@ing0 = Ingredient.create(name: "dark sesame oil", price: 0)
-@ing1 = Ingredient.create(name: "garlic cloves", price: 0)
-@ing2 = Ingredient.create(name: "chicken breasts", price: 0)
-@ing3 = Ingredient.create(name: "broccoli", price: 0)
-@ing4 = Ingredient.create(name: "mushrooms", price: 0)
-@ing5 = Ingredient.create(name: "carrots", price: 0)
-@ing6 = Ingredient.create(name: "green beans", price: 0)
-@ing7 = Ingredient.create(name: "bok choy", price: 0)
-@ing8 = Ingredient.create(name: "teriyaki sauce", price: 0)
+@ing0 = Ingredient.create(name: "dark sesame oil", price: 0, walmart_id: '011152068589')
+@ing1 = Ingredient.create(name: "garlic cloves", price: 0, walmart_id: '876941005530')
+@ing2 = Ingredient.create(name: "chicken breasts", price: 0, walmart_id: '023700030405')
+@ing3 = Ingredient.create(name: "broccoli", price: 0, walmart_id: '078716111587')
+@ing4 = Ingredient.create(name: "mushrooms", price: 0, walmart_id: '078742371931')
+@ing5 = Ingredient.create(name: "carrots", price: 0, walmart_id: '024000014881')
+@ing6 = Ingredient.create(name: "green beans", price: 0, walmart_id: '037100544493')
+@ing7 = Ingredient.create(name: "bok choy", price: 0, walmart_id: '797734476736')
+@ing8 = Ingredient.create(name: "teriyaki sauce", price: 0, walmart_id: '041390010309')
 
-RecipeIngredient.create(recipe_id: @recipe.id, ingredient_id: @ing0.id)
-RecipeIngredient.create(recipe_id: @recipe.id, ingredient_id: @ing1.id)
-RecipeIngredient.create(recipe_id: @recipe.id, ingredient_id: @ing2.id)
-RecipeIngredient.create(recipe_id: @recipe.id, ingredient_id: @ing3.id)
-RecipeIngredient.create(recipe_id: @recipe.id, ingredient_id: @ing4.id)
-RecipeIngredient.create(recipe_id: @recipe.id, ingredient_id: @ing5.id)
-RecipeIngredient.create(recipe_id: @recipe.id, ingredient_id: @ing6.id)
-RecipeIngredient.create(recipe_id: @recipe.id, ingredient_id: @ing7.id)
-RecipeIngredient.create(recipe_id: @recipe.id, ingredient_id: @ing8.id)
+RecipeIngredient.create(recipe_id: @recipe.id, ingredient_id: @ing0.id, measurement: '2 tablespoons dark sesame oil, divided')
+RecipeIngredient.create(recipe_id: @recipe.id, ingredient_id: @ing1.id, measurement: '2 garlic cloves, finely minced')
+RecipeIngredient.create(recipe_id: @recipe.id, ingredient_id: @ing2.id, measurement: '2 pounds chicken breasts, skinless and boneless')
+RecipeIngredient.create(recipe_id: @recipe.id, ingredient_id: @ing3.id, measurement: '1 head broccoli, stems removed')
+RecipeIngredient.create(recipe_id: @recipe.id, ingredient_id: @ing4.id, measurement: '1 dozen mushrooms, sliced')
+RecipeIngredient.create(recipe_id: @recipe.id, ingredient_id: @ing5.id, measurement: '3 carrots, peeled and julienned')
+RecipeIngredient.create(recipe_id: @recipe.id, ingredient_id: @ing6.id, measurement: '1/4 pound green beans, diced')
+RecipeIngredient.create(recipe_id: @recipe.id, ingredient_id: @ing7.id, measurement: '1 head bok choy, chopped')
+RecipeIngredient.create(recipe_id: @recipe.id, ingredient_id: @ing8.id, measurement: '2 to 3 tablespoons teriyaki sauce')
 
 @recipe = Recipe.create(title: "Pork Chops Pizzaiola", total_time: 30, instructions: %Q(Season chops with salt and pepper. 
 		Heat the extra-virgin olive oil in large skillet over medium-high heat. Add the crushed garlic and
@@ -41,7 +41,7 @@ RecipeIngredient.create(recipe_id: @recipe.id, ingredient_id: @ing8.id)
 		and oregano. Reduce the heat and cook for 7 to 8 minutes. Add the tomato paste, and cook for 1 minute, 
 		then add the wine, and cook for another minute. Stir in the stock and combine well. Slide the chops 
 		back into the pan, cover and simmer to finish cooking the chops, about 5 to 6 minutes. Arrange the 
-		chops and sauce on a serving platter and serve.)
+		chops and sauce on a serving platter and serve.))
 
 @ing0 = Ingredient.create(name: "dark sesame oil", price: 0)
 @ing1 = Ingredient.create(name: "garlic cloves", price: 0)

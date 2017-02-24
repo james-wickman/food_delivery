@@ -13,7 +13,7 @@
 			<ul>
 				<% @recipe.recipe_ingredients.each do |recipe_ingredient| %>
 					<div>
-						<button><%= link_to "+", order_index_path(name: recipe_ingredient.ingredient.name), remote: true, method: :post %></button>
+						<button><%= link_to "+", order_index_path(name: recipe_ingredient.ingredient.name, user_id: current_user.id), remote: true, method: :post %></button>
 						<%= recipe_ingredient.measurement %>
 						</div>
 				<% end %>

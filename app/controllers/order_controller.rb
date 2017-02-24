@@ -11,16 +11,17 @@ class OrderController < ApplicationController
     @order = Order.new(order_params)
     @ingredient = Ingredient.new(ingredient_params)
     @div_id = params[:name]
+    byebug
     if current_user
       if Ingredient.where(name: @ingredient.name).any?
         @ingredient = Ingredient.where(name: @ingredient.name).first
-        if current_order
+        if current_order != nil
           @order = current_order
           @order_ingredient = OrderIngredient.new(order_id: @order.id, ingredient_id: @ingredient.id, quantity: 1)
           if @order_ingredient.save
             respond_to do |format|
               format.js
-            end        
+            end
           end
         else
           if @order.save
@@ -35,7 +36,7 @@ class OrderController < ApplicationController
         end
       else
         if @ingredient.save
-          if current_order
+          if current_order != nil
             @order = current_order
             @order_ingredient = OrderIngredient.new(order_id: @order.id, ingredient_id: @ingredient.id, quantity: 1)
             if @order_ingredient.save
@@ -55,8 +56,13 @@ class OrderController < ApplicationController
             end 
           end
         end
-      end      
-    end 
+      end
+    else
+      flash[:notice] = "Sign in to add groceries"
+      respond_to do |format|
+        format.html
+      end
+    end
   end
 
   def show
