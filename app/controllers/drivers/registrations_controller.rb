@@ -26,7 +26,7 @@ before_action :configure_account_update_params, only: [:update]
   # DELETE /resource
   def destroy
     super
-  end
+  end 
 
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign
