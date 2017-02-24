@@ -45,6 +45,7 @@
 							<%= ingredient.name %>
 						<% end %>
 						<%= form_for @order, method: :put do |f| %>
+							<%= f.hidden_field :available, value: false %>				  
 							<%= f.hidden_field :completed, value: true %>
 							<%= f.submit "complete" %>
 						<% end %>

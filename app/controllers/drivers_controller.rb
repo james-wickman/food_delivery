@@ -14,7 +14,7 @@ class DriversController < ApplicationController
   end
   def show
   	@driver = current_driver
-    @order = Order.where(completed: false || nil).first
+    @order = Order.where(available: true).first
 
     if @order != nil && @order.ingredients != nil
       @ingredients = @order.ingredients.all 

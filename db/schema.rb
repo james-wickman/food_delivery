@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170223233842) do
+ActiveRecord::Schema.define(version: 20170224172008) do
 
   create_table "drivers", force: :cascade do |t|
     t.string   "email",                      default: "", null: false
@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 20170223233842) do
     t.datetime "updated_at", null: false
     t.integer  "driver_id"
     t.boolean  "completed"
+    t.boolean  "available"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
@@ -84,8 +85,9 @@ ActiveRecord::Schema.define(version: 20170223233842) do
     t.string   "title"
     t.integer  "total_time"
     t.text     "instructions"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "ingredient_array"
   end
 
   create_table "sessions", force: :cascade do |t|
