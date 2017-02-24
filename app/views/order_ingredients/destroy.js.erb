@@ -1,9 +1,5 @@
 $('#order_ingredients_list').html("");
 $('#order_ingredients_list').append("<%= j render 'order_ingredients_list' %>");
-
-if (!$('#order_ingredients_list li')) {
-	if $('#order_ingredients_list').html('') {
-		$('.total_order').addClass('hidden');
-		$('.nothing_in_cart').removeClass('hidden');
-	}
-}
+if ("<%= @order_ingredients.count %>" == 0 ) {
+	$('#place_order_button').html("");
+};

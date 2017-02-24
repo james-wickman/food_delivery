@@ -1,35 +1,30 @@
 <h1>OrderIngredients#index</h1>
 <p>Find me in app/views/order_ingredients/index.html.erb</p>
 
-<div id="order_ingredients_list">
-	<% if session[:order_id] %>
-		<%= render 'order_ingredients_list' %>
-	<% else %>
-		<div class="nothing_in_cart">
-			<h3>Nothing is in your cart right now</h3>
-		</div>
-	<% end %>
-</div>
-
 <% if @user.first_name == nil || @user.last_name == nil || @user.address == nil || @user.city == nil || @user.state == nil || @user.zip == nil || @user.phone_number == nil %>
 
-	<h3>Just so we know where to send everything please tell us more about yourself</h3>
+	<h3>Update your information to place an order!</h3>
 	<%= render "users/registrations/edit" %>
 
 <% else %>
 
-<% if @order_ingredients.count > 0 %>
-	<div class="place_order_button">
-		<%= form_tag order_path(@order.id), method: :put do %>
-			<%= hidden_field_tag :available, value: true %>	
-			<%= submit_tag "Place Order" %>
-		<% end %>	
-	</div>	
-<% end %>
+	<div id="order_ingredients_list">
+		<% if session[:order_id] %>
+			<%= render 'order_ingredients_list' %>
+		<% else %>
+			<div class="nothing_in_cart">
+				<h3>Nothing is in your cart right now</h3>
+			</div>
+		<% end %>
+	</div>
 
-	<%= form_tag order_path(@order.id), method: :put do %>
-		<%= hidden_field_tag :available, value: true %>	
-		<%= submit_tag "Place Order" %>
+	<% if @order_ingredients.count > 0 %>
+		<div id="place_order_button">
+			<%= form_tag order_path(@order.id), remote: true, method: :put do %>
+				<%= hidden_field_tag :available, value: true %>	
+				<%= submit_tag "Place Order" %>
+			<% end %>	
+		</div>	
 	<% end %>
 
 <% end %>
