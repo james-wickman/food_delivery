@@ -1,14 +1,10 @@
 <ul>
-	<% if @order != nil %>
-		
-		<!-- variable -->
 		<% order_total = 0 %>
 
 		<% @order.order_ingredients.each do |order_ingredient| %>
 
 			<!-- variable -->
 			<% line_total = order_ingredient.ingredient.price * order_ingredient.quantity%>
-
 			<li>
 				<span>Ingredient: <%= order_ingredient.ingredient.name %></span>
 				<span>Price: <%= order_ingredient.ingredient.price %></span>
@@ -24,12 +20,10 @@
 				<% order_total = order_total + line_total %>
 				<%= link_to "Remove", order_ingredient_path(id: order_ingredient.id), method: :delete, remote: true %>
 			</li>
-
 		<% end %>
 
 		<div id="orderTotal">
 			<h3>Order Total: <%= order_total %></h3>
 		</div>
-
-	<% end %>
+	
 </ul>

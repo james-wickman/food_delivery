@@ -1,5 +1,7 @@
 $('#order_ingredients_list').html("");
 $('#order_ingredients_list').append("<%= j render 'order_ingredients_list' %>");
+
 if ("<%= @order_ingredients.count %>" == 0 ) {
 	$('#place_order_button').html("");
 };
+
