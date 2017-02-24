@@ -4,7 +4,7 @@
 
 
 .drivers_settings, .users_settings {
-	background-color: lightgrey;
+	background-color: #C8FAEF;
 	height: 1100px;
 	width: 600px;
 	float: right; 
@@ -12,18 +12,25 @@
 	margin-right: 80px;
 }
 
-.driver_info {
+.driver_info, .user_info{
 	display: inline-block;
+	background-color: #C8FAEF;
+	width: 400px;
+	height: 500px;
+	text-align: center;
+	margin-left: 40px;
 }
 .hidden {
 	display: none;
 }
-.driver_show_page {
+.driver_show_page, .user_show_page{
 	padding-top: -50px;
 	height: 1100px;
 	width: 100%;
-	background-color: lightblue;
 }
 .notice, .alert{
 	padding: 0px;
+}
+.user_nav, .driver_nav {
+	background-color: #27AD90;
 }
