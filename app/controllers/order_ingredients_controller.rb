@@ -1,6 +1,11 @@
 class OrderIngredientsController < ApplicationController
   def index
-    @order = current_order
+    if current_order
+      @order = current_order
+      p Ingredient.first.update_prices(@order)
+    else
+      redirect_back(fallback_location: root_path)
+    end
   end
 
   def new

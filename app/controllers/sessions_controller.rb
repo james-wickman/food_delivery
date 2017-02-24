@@ -6,5 +6,6 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+  	session[:order_id] = nil
   end
 end
