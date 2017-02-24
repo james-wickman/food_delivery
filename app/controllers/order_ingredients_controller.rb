@@ -2,6 +2,7 @@ class OrderIngredientsController < ApplicationController
   def index
     @order = current_order
     @user = current_user
+    @order_ingredients = OrderIngredient.where(order_id: @order.id)
   end
 
   def new
@@ -17,8 +18,10 @@ class OrderIngredientsController < ApplicationController
   end
 
   def update
+    @user = current_user
     @order = current_order
     @order_ingredient = OrderIngredient.find(order_ingredient_params[:id])
+    @order_ingredients = OrderIngredient.where(order_id: @order.id)
     if @order_ingredient.update_attributes(order_ingredient_params)
       respond_to do |format|
         format.js
@@ -27,8 +30,10 @@ class OrderIngredientsController < ApplicationController
   end
 
   def destroy
+    @user = current_user
     @order = current_order
     @order_ingredient = OrderIngredient.find(params[:id])
+    @order_ingredients = OrderIngredient.where(order_id: @order.id)
     if @order_ingredient.destroy
       respond_to do |format|
         format.js
