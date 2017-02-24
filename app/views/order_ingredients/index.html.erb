@@ -3,8 +3,5 @@
 
 <div id="order_ingredients_list">
 	<%= render 'order_ingredients_list', order: @order %>
-	<%= form_for @order, method: :put do |f| %>
-		<%= f.hidden_field :available, value: true %>
-		<%= f.submit "complete" %>
-	<% end %>
+	
 </div>
