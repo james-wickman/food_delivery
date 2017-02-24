@@ -1,29 +1,30 @@
 <ul>
-		<% order_total = 0 %>
+	<% order_total = 0 %>
 
-		<% @order.order_ingredients.each do |order_ingredient| %>
+	<% @order.order_ingredients.each do |order_ingredient| %>
 
-			<!-- variable -->
-			<% line_total = order_ingredient.ingredient.price * order_ingredient.quantity%>
-			<li>
-				<span>Ingredient: <%= order_ingredient.ingredient.name %></span>
-				<span>Price: <%= order_ingredient.ingredient.price %></span>
-				<span>
-					<%= form_tag order_ingredient_path(order_ingredient.id), remote: true, method: :put do %>
-						<%= hidden_field_tag :id, value: order_ingredient.id %>
-						<%= label_tag :quantity %>
-						<%= select_tag :quantity, options_for_select([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], order_ingredient.quantity) %>
-						<%= submit_tag "update"%>					  
-					<% end %>				
-				</span>	
-				<span>Item Total: <span id="lineTotal"><%= line_total %></span></span>
-				<% order_total = order_total + line_total %>
-				<%= link_to "Remove", order_ingredient_path(id: order_ingredient.id), method: :delete, remote: true %>
-			</li>
-		<% end %>
+		<!-- variable -->
+		<% line_total = order_ingredient.ingredient.price * order_ingredient.quantity%>
+		<li>
+			<span>Ingredient: <%= order_ingredient.ingredient.name %></span>
+			<span>Price: <%= order_ingredient.ingredient.price %></span>
+			<span>
+				<%= form_tag order_ingredient_path(order_ingredient.id), remote: true, method: :put do %>
+					<%= hidden_field_tag :id, value: order_ingredient.id %>
+					<%= label_tag :quantity %>
+					<%= select_tag :quantity, options_for_select([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], order_ingredient.quantity) %>
+					<%= submit_tag "update"%>					  
+				<% end %>				
+			</span>	
+			<span>Item Total: <span id="lineTotal"><%= line_total %></span></span>
+			<% order_total = order_total + line_total %>
+			<%= link_to "Remove", order_ingredient_path(id: order_ingredient.id), method: :delete, remote: true %>
+		</li>
+		
+	<% end %>
 
-		<div id="orderTotal">
-			<h3>Order Total: <%= order_total %></h3>
-		</div>
+	<div id="orderTotal">
+		<h3>Order Total: <%= order_total %></h3>
+	</div>
 	
 </ul>

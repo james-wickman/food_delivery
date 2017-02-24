@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   resources :order_ingredients
 
-  resources :order
+  resources :orders
 
   resources :recipe_ingredients
 

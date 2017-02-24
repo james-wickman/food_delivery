@@ -1,8 +1,10 @@
 class OrderIngredientsController < ApplicationController
   def index
-    @order = current_order
+    if session[:order_id]
+      @order = current_order
+      @order_ingredients = OrderIngredient.where(order_id: @order.id)      
+    end
     @user = current_user
-    @order_ingredients = OrderIngredient.where(order_id: @order.id)
   end
 
   def new
