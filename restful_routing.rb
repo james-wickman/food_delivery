@@ -11,14 +11,14 @@
                            PATCH  /order_ingredients/:id(.:format)       order_ingredients#update
                            PUT    /order_ingredients/:id(.:format)       order_ingredients#update
                            DELETE /order_ingredients/:id(.:format)       order_ingredients#destroy
-               order_index GET    /order(.:format)                       order#index
-                           POST   /order(.:format)                       order#create
-                 new_order GET    /order/new(.:format)                   order#new
-                edit_order GET    /order/:id/edit(.:format)              order#edit
-                     order GET    /order/:id(.:format)                   order#show
-                           PATCH  /order/:id(.:format)                   order#update
-                           PUT    /order/:id(.:format)                   order#update
-                           DELETE /order/:id(.:format)                   order#destroy
+                    orders GET    /orders(.:format)                      orders#index
+                           POST   /orders(.:format)                      orders#create
+                 new_order GET    /orders/new(.:format)                  orders#new
+                edit_order GET    /orders/:id/edit(.:format)             orders#edit
+                     order GET    /orders/:id(.:format)                  orders#show
+                           PATCH  /orders/:id(.:format)                  orders#update
+                           PUT    /orders/:id(.:format)                  orders#update
+                           DELETE /orders/:id(.:format)                  orders#destroy
         recipe_ingredients GET    /recipe_ingredients(.:format)          recipe_ingredients#index
                            POST   /recipe_ingredients(.:format)          recipe_ingredients#create
      new_recipe_ingredient GET    /recipe_ingredients/new(.:format)      recipe_ingredients#new

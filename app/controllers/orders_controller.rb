@@ -1,4 +1,4 @@
-class OrderController < ApplicationController
+class OrdersController < ApplicationController
 
   def index
   end
@@ -56,8 +56,7 @@ class OrderController < ApplicationController
           end
         end
       end
-      else
-      flash[:notice] = "Sign in to add groceries"
+    else
       respond_to do |format|
         format.html
       end
@@ -73,12 +72,15 @@ class OrderController < ApplicationController
   end
 
   def update
-    @driver = current_driver
-    @order = Order.find(params[:id])
-    session[:order_id] = nil
-    if @order.update_attributes(order_params)
-      if @driver != nil
-        redirect_to "/drivers/show", notice: 'Order was successfully Completed.' 
+    respond_to do |format|
+      @driver = current_driver
+      @order = Order.find(params[:id])
+      session[:order_id] = nil
+      if @order.update_attributes(order_params)
+        if @driver != nil
+          format.html { redirect_to drivers_show, notice: 'Order was successfully completed.' }        
+        end
+        format.js
       end
     end
   end
