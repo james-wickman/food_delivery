@@ -1,73 +1,71 @@
-
-<div class="driver_info">
-<h1>Drivers#show</h1>
- 
- <h3><%= @driver.email %></h3>
- <h3><%= @driver.first_name %>
- <%= @driver.last_name %></h3>
- 
-</div>
-<div class="drivers_settings">
-	 <ul class="nav nav-tabs" id="myTab" role="tablist">
-	    <li class="nav-item">
-	      <a class="nav-link active" data-toggle="tab" href="#not_ready" role="tab" aria-controls="not_ready">Main</a>
-	    </li>
-	  	<li class="nav-item">
-	      <a class="nav-link" data-toggle="tab" href="#edit_profile" role="tab" aria-controls="edit_profile">Edit Profile</a>
-	    </li>
-	   </ul>
-	  <div class="tab-content">
-	    <div class="tab-pane active" id="not_ready" role="tabpanel">
-	    	<div>
-			</div>
-			<% if @old_order == nil %>
-	    		<input id="toggle-event" type="checkbox" data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger">
-	    	<% else %>
-	    		<% @order = @old_order %>
-				<input id="toggle-event" type="checkbox" data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger" checked disabled="true">
-				<div class = "order">
-					<%= render "user_info" %>
+<div class="driver_show_page">
+	<div class="driver_info">
+	 
+	 <h3><%= @driver.first_name %>
+	 <%= @driver.last_name %></h3>
+	 <h3><%= @driver.email %></h3>
+	 
+	</div>
+	<div class="drivers_settings">
+		 <ul class="nav nav-tabs" id="myTab" role="tablist">
+		    <li class="nav-item">
+		      <a class="nav-link active" data-toggle="tab" href="#not_ready" role="tab" aria-controls="not_ready">Main</a>
+		    </li>
+		  	<li class="nav-item">
+		      <a class="nav-link" data-toggle="tab" href="#edit_profile" role="tab" aria-controls="edit_profile">Edit Profile</a>
+		    </li>
+		   </ul>
+		  <div class="tab-content">
+		    <div class="tab-pane active" id="not_ready" role="tabpanel">
+		    	<div>
 				</div>
-			<% end %>
-			<div id="console-event"></div>
-			<div class="order_holder hidden">
-				<div class="accept_order">
-					<% if @order != nil %>
-						one job available in <%= @order.user.city %>
-						<%= form_tag order_path(@order), remote: true, method: :put do %>
-							<%= hidden_field_tag :available, value: false %>				  
-							<%= hidden_field_tag :completed, value: false %>
-							<%= submit_tag "Accept" %>
+				<% if @old_order == nil %>
+		    		<input id="toggle-event" type="checkbox" data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger">
+		    	<% else %>
+		    		<% @order = @old_order %>
+					<input id="toggle-event" type="checkbox" data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger" checked disabled="true">
+					<div class = "order">
+						<%= render "user_info" %>
+					</div>
+				<% end %>
+				<div id="console-event"></div>
+				<div class="order_holder hidden">
+					<div class="accept_order">
+						<% if @order != nil %>
+							one job available in <%= @order.user.city %>
+							<%= form_tag order_path(@order), remote: true, method: :put do %>
+								<%= hidden_field_tag :available, value: false %>				  
+								<%= hidden_field_tag :completed, value: false %>
+								<%= submit_tag "Accept" %>
+							<% end %>
+						<% else %>
+							Nothing is available right now.
 						<% end %>
-					<% else %>
-						Nothing is available right now.
-					<% end %>
+					</div>
+					<div class="order hidden">
+						<%= render "user_info" %>
+					</div>
 				</div>
-				<div class="order hidden">
-					<%= render "user_info" %>
-				</div>
-			</div>
-	    </div>
-	    <div class="tab-pane" id="edit_profile" role="tabpanel"><%= render 'drivers/registrations/edit' %></div>
-	  </div>
-	  <script>
-	    $(function () {
-	      $('#myTab a:first').tab('show')
-	    })
-	    $(document).ready(function() {
-			$.ajax({
-		        type: "PUT",
-		        url: "/drivers/update",
-		        data: { driver: { available: false } },
-		        dataType: "string", // you want a difference between normal and ajax-calls, and json is standard
-		    	success: function(json){
-		        	console.log(valuesToSubmit, json);
-		        }
-		    });
-		})
-	  </script>
-	
-
+		    </div>
+		    <div class="tab-pane" id="edit_profile" role="tabpanel"><%= render 'drivers/registrations/edit' %></div>
+		  </div>
+		  <script>
+		    $(function () {
+		      $('#myTab a:first').tab('show')
+		    })
+		    $(document).ready(function() {
+				$.ajax({
+			        type: "PUT",
+			        url: "/drivers/update",
+			        data: { driver: { available: false } },
+			        dataType: "string", // you want a difference between normal and ajax-calls, and json is standard
+			    	success: function(json){
+			        	console.log(valuesToSubmit, json);
+			        }
+			    });
+			})
+		  </script>
+	</div>
 </div>
 	
 
