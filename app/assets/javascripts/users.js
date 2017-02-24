@@ -2,18 +2,6 @@
 // # All this logic will automatically be available in application.js.
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 
-
-$(document).ready(function() {
-	$.ajax({
-        type: "PUT",
-        url: "/drivers/update",
-        data: { driver: { available: false } },
-        dataType: "string", // you want a difference between normal and ajax-calls, and json is standard
-    	success: function(json){
-        	console.log(valuesToSubmit, json);
-        }
-    });
-})
 $(document).on('turbolinks:load', function() {
 	$('#ranger').on('change', function() {
 	  $('#target').text($('#ranger').val())
