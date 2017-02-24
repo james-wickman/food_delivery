@@ -43,6 +43,14 @@ RecipeIngredient.create(recipe_id: @recipe.id, ingredient_id: @ing8.id)
 		back into the pan, cover and simmer to finish cooking the chops, about 5 to 6 minutes. Arrange the 
 		chops and sauce on a serving platter and serve.)
 
-
+@ing0 = Ingredient.create(name: "dark sesame oil", price: 0)
+@ing1 = Ingredient.create(name: "garlic cloves", price: 0)
+@ing2 = Ingredient.create(name: "chicken breasts", price: 0)
+@ing3 = Ingredient.create(name: "broccoli", price: 0)
+@ing4 = Ingredient.create(name: "mushrooms", price: 0)
+@ing5 = Ingredient.create(name: "carrots", price: 0)
+@ing6 = Ingredient.create(name: "green beans", price: 0)
+@ing7 = Ingredient.create(name: "bok choy", price: 0)
+@ing8 = Ingredient.create(name: "teriyaki sauce", price: 0)
 
 
