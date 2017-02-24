@@ -55,6 +55,16 @@ $(document).on('turbolinks:load', function() {
 		$('#toggle-event').attr('disabled', false);
 		$('.order').addClass('hidden');
 		$('.accept_order').removeClass('hidden');
+		$.ajax({
+	        type: "PUT",
+	        url: "/drivers/update",
+	        data: { driver: { available: true } },
+	        dataType: "string", // you want a difference between normal and ajax-calls, and json is standard
+	    	success: function(json){
+	        	console.log(valuesToSubmit, json);
+	        }
+	    });
+
 	})
     $('#toggle-event').change(function() { 
     	$('#console-event').html('Available: ' + $(this).prop('checked') + "<br>");
