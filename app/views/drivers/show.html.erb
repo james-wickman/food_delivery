@@ -20,15 +20,22 @@
 	    <div class="tab-pane active" id="not_ready" role="tabpanel">
 	    	<div>
 			</div>
-	    	<input id="toggle-event" type="checkbox" data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger">
-	    	
+			<% if @old_order == nil %>
+	    		<input id="toggle-event" type="checkbox" data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger">
+	    	<% else %>
+	    		<% @order = @old_order %>
+				<input id="toggle-event" type="checkbox" data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger" checked disabled="true">
+				<div class = "order">
+					<%= render "user_info" %>
+				</div>
+			<% end %>
 			<div id="console-event"></div>
 			<div class="order_holder hidden">
 				<div class="accept_order">
 					<% if @order != nil %>
 						one job available in <%= @order.user.city %>
-						<%= form_tag order_path(@order), method: :put do %>
-							<%= hidden_field_tag :available, value: true %>				  
+						<%= form_tag order_path(@order), remote: true, method: :put do %>
+							<%= hidden_field_tag :available, value: false %>				  
 							<%= hidden_field_tag :completed, value: false %>
 							<%= submit_tag "Accept" %>
 						<% end %>
@@ -37,23 +44,7 @@
 					<% end %>
 				</div>
 				<div class="order hidden">
-					<%if @order != nil %>
-						<%= @order.user.first_name %>
-						<%= @order.user.last_name %> <br>
-						<%= @order.user.phone_number %><br>
-						<%= @order.user.address %> <br>
-						<%= @order.user.city %>
-						<%= @order.user.state %> <br>
-						<%= @order.user.zip %> <hr>
-						<% @ingredients.each do |ingredient| %>
-							<%= ingredient.name %>
-						<% end %>
-						<%= form_tag order_path(@order), method: :put do %>
-							<%= hidden_field_tag :available, value: false %>				  
-							<%= hidden_field_tag :completed, value: true %>
-							<%= submit_tag "Accept" %>
-						<% end %>
-					<% end %>
+					<%= render "user_info" %>
 				</div>
 			</div>
 	    </div>
