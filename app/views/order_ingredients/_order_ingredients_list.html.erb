@@ -1,5 +1,7 @@
 <ul>
+
 	<% if @order != nil %>
+
 		<% @order.order_ingredients.each do |order_ingredient| %>
 			<li>
 				<span>Ingredient: <%= order_ingredient.ingredient.name %></span>
@@ -7,6 +9,7 @@
 				<span>Quantity: <%= order_ingredient.quantity %></span>
 				<%= link_to "Remove", order_ingredient_path(id: order_ingredient.id), method: :delete, remote: true %>
 			</li>
+
 		<% end %>
 	<%= form_for @order, method: :put do |f| %>
 		<%= f.hidden_field :available, value: true %>
@@ -14,5 +17,6 @@
 	<% end %>	
 	<% else %>
 		<h3>Nothing is in your cart right now</h3>
+
 	<% end %>
 </ul>
