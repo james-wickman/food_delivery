@@ -11,7 +11,6 @@ class OrderController < ApplicationController
     @order = Order.new(order_params)
     @ingredient = Ingredient.new(ingredient_params)
     @div_id = params[:name]
-    byebug
     if current_user
       if Ingredient.where(name: @ingredient.name).any?
         @ingredient = Ingredient.where(name: @ingredient.name).first
@@ -57,7 +56,7 @@ class OrderController < ApplicationController
           end
         end
       end
-    else
+      else
       flash[:notice] = "Sign in to add groceries"
       respond_to do |format|
         format.html
@@ -89,7 +88,7 @@ class OrderController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:user_id, :driver_id, :completed, :available)
+    params.permit(:user_id, :driver_id, :completed, :available)
   end
 
   def ingredient_params

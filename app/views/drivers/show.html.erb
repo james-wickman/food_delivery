@@ -27,7 +27,11 @@
 				<div class="accept_order">
 					<% if @order != nil %>
 						one job available in <%= @order.user.city %>
-						<button class="accept_order">Accept</button>
+						<%= form_tag order_path(@order), method: :put do %>
+							<%= hidden_field_tag :available, value: true %>				  
+							<%= hidden_field_tag :completed, value: false %>
+							<%= submit_tag "Accept" %>
+						<% end %>
 					<% else %>
 						Nothing is available right now.
 					<% end %>
@@ -44,10 +48,10 @@
 						<% @ingredients.each do |ingredient| %>
 							<%= ingredient.name %>
 						<% end %>
-						<%= form_for @order, method: :put do |f| %>
-							<%= f.hidden_field :available, value: false %>				  
-							<%= f.hidden_field :completed, value: true %>
-							<%= f.submit "complete" %>
+						<%= form_tag order_path(@order), method: :put do %>
+							<%= hidden_field_tag :available, value: false %>				  
+							<%= hidden_field_tag :completed, value: true %>
+							<%= submit_tag "Accept" %>
 						<% end %>
 						<%= link_to "Complete", @order %>
 						<button class="complete_order">Complete</button>

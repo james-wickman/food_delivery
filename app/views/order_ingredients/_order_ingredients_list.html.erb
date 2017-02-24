@@ -1,5 +1,4 @@
 <ul>
-
 	<% if @order != nil %>
 
 		<% @order.order_ingredients.each do |order_ingredient| %>
@@ -11,10 +10,11 @@
 			</li>
 
 		<% end %>
-	<%= form_for @order, method: :put do |f| %>
-		<%= f.hidden_field :available, value: true %>
-		<%= f.submit "complete" %>
-	<% end %>	
+
+		<%= form_tag order_path(@order.id), method: :put do %>
+			<%= hidden_field_tag :available, value: true %>	
+			<%= submit_tag "Place Order" %>
+		<% end %>	
 	<% else %>
 		<h3>Nothing is in your cart right now</h3>
 
