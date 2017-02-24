@@ -18,3 +18,16 @@
 html, body {
 	height: 100%;
 }
+
+.nav {
+	text-align: center;
+}
+
+.nav-item button {
+	display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+   /* padding: 25px 0 0 20px;*/
+    position: relative;
+}
