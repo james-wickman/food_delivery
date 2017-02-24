@@ -53,8 +53,6 @@
 							<%= hidden_field_tag :completed, value: true %>
 							<%= submit_tag "Accept" %>
 						<% end %>
-						<%= link_to "Complete", @order %>
-						<button class="complete_order">Complete</button>
 					<% end %>
 				</div>
 			</div>
@@ -65,6 +63,17 @@
 	    $(function () {
 	      $('#myTab a:first').tab('show')
 	    })
+	    $(document).ready(function() {
+			$.ajax({
+		        type: "PUT",
+		        url: "/drivers/update",
+		        data: { driver: { available: false } },
+		        dataType: "string", // you want a difference between normal and ajax-calls, and json is standard
+		    	success: function(json){
+		        	console.log(valuesToSubmit, json);
+		        }
+		    });
+		})
 	  </script>
 	
 
