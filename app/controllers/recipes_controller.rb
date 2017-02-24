@@ -9,8 +9,6 @@ class RecipesController < ApplicationController
       format.html
       format.js
     end
-    p params
-    p @recipes
   end
 
   def show
