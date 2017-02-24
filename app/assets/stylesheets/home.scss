@@ -69,11 +69,11 @@ body {
 }
 
 .main_buttons {
-	padding: 40px;
     border: 40px;
     width: 50%;
     margin: 0 auto;
     text-align: center;
+    padding-bottom: 100px;
 }
 
 #view_recipes {
@@ -90,5 +90,19 @@ body {
 .mission_full{
 	background-color: #C8FAEF;
 	margin: 0;
+	font-size: 14pt;
 
+}
+
+.mission_full h3 {
+	width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+
+}
+
+.mission_full p {
+	width: 50%;
+	margin: auto;
 }
