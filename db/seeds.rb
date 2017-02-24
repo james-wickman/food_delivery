@@ -34,23 +34,5 @@ RecipeIngredient.create(recipe_id: @recipe.id, ingredient_id: @ing6.id, measurem
 RecipeIngredient.create(recipe_id: @recipe.id, ingredient_id: @ing7.id, measurement: '1 head bok choy, chopped')
 RecipeIngredient.create(recipe_id: @recipe.id, ingredient_id: @ing8.id, measurement: '2 to 3 tablespoons teriyaki sauce')
 
-@recipe = Recipe.create(title: "Pork Chops Pizzaiola", total_time: 30, instructions: %Q(Season chops with salt and pepper. 
-		Heat the extra-virgin olive oil in large skillet over medium-high heat. Add the crushed garlic and
-		stir it around to flavor the oil. Add in the chops and caramelize on both sides, 2 to 3 minutes per 
-		side. Remove the chops to a plate and reserve. Stir in the fennel seed, onions, red pepper flakes, 
-		and oregano. Reduce the heat and cook for 7 to 8 minutes. Add the tomato paste, and cook for 1 minute, 
-		then add the wine, and cook for another minute. Stir in the stock and combine well. Slide the chops 
-		back into the pan, cover and simmer to finish cooking the chops, about 5 to 6 minutes. Arrange the 
-		chops and sauce on a serving platter and serve.))
-
-@ing0 = Ingredient.create(name: "dark sesame oil", price: 0)
-@ing1 = Ingredient.create(name: "garlic cloves", price: 0)
-@ing2 = Ingredient.create(name: "chicken breasts", price: 0)
-@ing3 = Ingredient.create(name: "broccoli", price: 0)
-@ing4 = Ingredient.create(name: "mushrooms", price: 0)
-@ing5 = Ingredient.create(name: "carrots", price: 0)
-@ing6 = Ingredient.create(name: "green beans", price: 0)
-@ing7 = Ingredient.create(name: "bok choy", price: 0)
-@ing8 = Ingredient.create(name: "teriyaki sauce", price: 0)
 
 
