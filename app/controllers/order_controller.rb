@@ -55,7 +55,12 @@ class OrderController < ApplicationController
             end 
           end
         end
-      end      
+      end
+    else
+      flash[:notice] = "Sign in to add groceries"
+      respond_to do |format|
+        format.html
+      end
     end
   end
 
