@@ -1,0 +1,17 @@
+<%if @order != nil %>
+	<%= @order.user.first_name %>
+	<%= @order.user.last_name %> <br>
+	<%= @order.user.phone_number %><br>
+	<%= @order.user.address %> <br>
+	<%= @order.user.city %>
+	<%= @order.user.state %> <br>
+	<%= @order.user.zip %> <hr>
+	<% @ingredients.each do |ingredient| %>
+		<%= ingredient.name %>
+	<% end %>
+	<%= form_tag order_path(@order), remote: true, method: :put do %>
+		<%= hidden_field_tag :available, value: false %>				  
+		<%= hidden_field_tag :completed, value: true %>
+		<%= submit_tag "Accept" %>
+	<% end %>
+<% end %>

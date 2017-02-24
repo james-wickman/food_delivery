@@ -14,11 +14,11 @@ class DriversController < ApplicationController
   end
   def show
   	@driver = current_driver
-    if @orders = @driver.order != nil
-      for @orders.each do |order|
+    @orders = @driver.orders
+    if @orders != nil
+      @orders.each do |order|
         if order.completed = false
-          @order = order
-          break
+          @old_order = order
         else
           @order = Order.where(available: true).first
         end
