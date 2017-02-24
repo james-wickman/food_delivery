@@ -5,7 +5,17 @@
 
 body {
 	height: 100%;
+    line-height: 1.5;
 
+}
+
+.nav-item {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 25px 0 0 20px;
+    position: relative;
 }
 
 //Hero image at top of home page
@@ -37,15 +47,18 @@ body {
     color: rgba(255,255,255,1);
     position: relative;
     z-index: 10;
+    line-height: 1.5;
 }
 
 .h1, h1 {
     font-size: 2.5rem;
     padding: 40px;
+    line-height: 1.5;
 }
 
 .fontsans_big {
 	padding: 30px;
+    line-height: 1.5;
 }
 
 .content-padding .recipes {
@@ -66,31 +79,65 @@ body {
     width: 50%;
     margin: 0 auto;
     padding: 60px;
+    line-height: 1.5;
 }
 
-.main_buttons {
-    border: 40px;
-    width: 50%;
+.button_wrapper {
+    width: 75%;
     margin: 0 auto;
     text-align: center;
     padding-bottom: 100px;
 }
 
-#view_recipes {
-	padding: 30px;
-    border: 10px;
-    width: 50%;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 14pt;
-    color: #4a454c; 
 
+a {
+    padding: 50px;
+   
 }
+
+#recipe_button {
+    display: inline-flex;
+    font-family: 'Grand Hotel';
+    font-size: 1.4em;
+    background: none;
+    border: 2px solid #336157;
+    border-radius: 6px;
+    color: #3c393d;
+    padding: 50px;
+    width: 300px;
+    height: 170px;
+    text-align: center;
+}
+
+#career_opps {
+    display: inline-flex;
+    font-family: 'Grand Hotel';
+    font-size: 1.4em;
+    background: none;
+    border: 2px solid #336157;
+    border-radius: 6px;
+    color: #3c393d;
+    padding: 50px;
+    width: 300px;
+    height: 170px;
+}
+
+// #view_recipes {
+// 	padding: 30px;
+//     border: 10px;
+//     width: 50%;
+//     margin: 0 auto;
+//     text-align: center;
+//     font-size: 14pt;
+//     color: #4a454c; 
+
+// }
 
 .mission_full{
 	background-color: #C8FAEF;
 	margin: 0;
 	font-size: 14pt;
+    line-height: 1.5;
 
 }
 
@@ -105,4 +152,14 @@ body {
 .mission_full p {
 	width: 50%;
 	margin: auto;
+}
+
+#sectiontional_image {
+    background-position: center;
+}
+
+#job_opp {
+    width: 75%;
+    margin: auto;
+
 }
