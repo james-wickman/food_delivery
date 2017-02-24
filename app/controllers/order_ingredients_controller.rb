@@ -1,7 +1,7 @@
 class OrderIngredientsController < ApplicationController
   def index
     @order = current_order
-
+    @user = current_user
   end
 
   def new

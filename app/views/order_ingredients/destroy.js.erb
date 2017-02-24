@@ -1,2 +1,9 @@
 $('#order_ingredients_list').html("");
 $('#order_ingredients_list').append("<%= j render 'order_ingredients_list' %>");
+
+$(document).on('turbolinks:load', function() {
+	if $('.#order_ingredients_list').html('') {
+		$('.total_order').addClass('hidden');
+		$('.nothing_in_cart').removeClass('hidden');
+	}
+});
