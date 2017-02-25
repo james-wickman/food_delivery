@@ -40,7 +40,7 @@
     <%= f.label :phone_number %><br />
     <%= f.text_field :phone_number %>
   </div>
-  <div class="field">
+  <div class="field"> 
     <%= f.label :email %><br />
     <%= f.email_field :email %>
   </div>
@@ -64,9 +64,9 @@
   </div>
 
   <div class="field">
-    <%= f.label :current_password %> <h3>(we need your current password to confirm your changes)</h3><br />
+    <%= f.label :current_password %> <i class="current_password_confirm_warning">(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
+  </div><br>
 
   <div class="actions">
     <%= f.submit "Update" %>
