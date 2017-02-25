@@ -43,23 +43,25 @@ body {
 
     #header_content{
     	text-align: center;
-    	 font-family: 'Arvo';
+
+    	font-family: 'Arvo';
+
         padding: 6rem 0;
         color: rgba(255,255,255,1);
         position: relative;
         z-index: 10;
-        line-height: 1.5;
+        line-height: 2.0;
     }
 
     .h1, h1 {
         font-size: 2.5rem;
         padding: 40px;
-        line-height: 1.5;
+        line-height: 2.5;
     }
 
     .fontsans_big {
     	padding: 30px;
-        line-height: 1.5;
+        line-height: 2.0;
     }
 
 
@@ -83,7 +85,7 @@ body {
     width: 50%;
     margin: 0 auto;
     padding: 60px;
-    line-height: 1.5;
+    line-height: 2.0;
 }
 
 .button_wrapper {
@@ -162,11 +164,13 @@ body {
     display: flex;
     align-items: baseline;
 
-    p {
+    p{
         padding-left: 20px;
         padding-right: 20px;
+        line-height: 2.0;
     }
 }
+
 
 blockquote {
     text-align: center;
