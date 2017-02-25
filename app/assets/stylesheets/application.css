@@ -29,4 +29,10 @@ html, body {
     font-weight: 700;
     text-transform: uppercase;
     position: relative;
+    color: #32E0BA;
 }
+
+a {
+	color: #32E0BA;
+}
+

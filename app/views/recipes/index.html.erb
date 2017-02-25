@@ -1,30 +1,31 @@
-<div class="index_container">
-	<h1>Search for an ingredient or a recipe.<hr>If you want to add it to your shopping cart, just click the add link.</h1>
+<div class="container-fluid">
+	<div class="index_container">
+		<h1>Search for an ingredient or a recipe.<hr>If you want to add it to your shopping cart, just click the add link.</h1>
 
-	<div id="recipe_index_photo">
-		<%= image_tag('fruit_veg_grid.jpg')%>
-	</div>
-
-	<div class="search_form">
-		<div id="search_ing">
-			<%= form_tag(ingredients_path, remote: true, class: "search", "data-scroll-to": "#searchResults") do %>
-				<%= label_tag "Search Ingredients" %>
-				<%= text_field_tag :query %>
-				<%= submit_tag "submit" %>
-			<% end %>	
+		<div id="recipe_index_photo">
+			<%= image_tag('fruit_veg_grid.jpg')%>
 		</div>
 
-		<div id="search_recipes">
-			<%= form_tag(recipes_path, remote: true, method: :get, class: "search", "data-scroll-to": "#searchResults") do %>
-				<%= label_tag "Search Recipes" %>
-				<%= text_field_tag :title, params[:search] %>
-				<%= submit_tag "submit" %>
-			<% end %>	
+		<div class="search_form">
+			<div id="search_ing">
+				<%= form_tag(ingredients_path, remote: true, class: "search", "data-scroll-to": "#searchResults") do %>
+					<%= label_tag "Search Ingredients" %>
+					<%= text_field_tag :query %>
+					<%= submit_tag "submit" %>
+				<% end %>	
+			</div>
+
+			<div id="search_recipes">
+				<%= form_tag(recipes_path, remote: true, method: :get, class: "search", "data-scroll-to": "#searchResults") do %>
+					<%= label_tag "Search Recipes" %>
+					<%= text_field_tag :title, params[:search] %>
+					<%= submit_tag "submit" %>
+				<% end %>	
+			</div>
 		</div>
 	</div>
-</div>
-	
-<section>
-	<div id="searchResults"></div>
-</section>
-
+		
+	<section>
+		<div id="searchResults"></div>
+	</section>
+</div>	
