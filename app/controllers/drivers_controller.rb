@@ -21,8 +21,6 @@ class DriversController < ApplicationController
     else
       @order = Order.get_next_available_job
     end
-    byebug
-
   end
 
   private

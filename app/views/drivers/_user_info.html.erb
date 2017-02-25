@@ -6,8 +6,9 @@
 	<%= @order.user.city %>
 	<%= @order.user.state %> <br>
 	<%= @order.user.zip %> <hr>
-	<% @order.ingredients.each do |ingredient| %>
-		<%= ingredient.name %>
+	<% @order.order_ingredients.each do |order_ingredient| %>
+		<%= order_ingredient.quantity %> <br>
+		<%= order_ingredient.ingredient.name %><hr>
 	<% end %>
 	<%= form_tag order_path(@order), method: :put do %>
 		<%= hidden_field_tag :available, false %>				  
