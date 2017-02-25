@@ -6,12 +6,13 @@
 	<%= @order.user.city %>
 	<%= @order.user.state %> <br>
 	<%= @order.user.zip %> <hr>
-	<% @ingredients.each do |ingredient| %>
-		<%= ingredient.name %>
+	<% @order.order_ingredients.each do |order_ingredient| %>
+		<%= order_ingredient.quantity %> <br>
+		<%= order_ingredient.ingredient.name %><hr>
 	<% end %>
-	<%= form_tag order_path(@order), remote: true, method: :put do %>
-		<%= hidden_field_tag :available, value: false %>				  
-		<%= hidden_field_tag :completed, value: true %>
-		<%= submit_tag "Accept" %>
+	<%= form_tag order_path(@order), method: :put do %>
+		<%= hidden_field_tag :available, false %>				  
+		<%= hidden_field_tag :completed, true %>
+		<%= submit_tag "Complete" %>
 	<% end %>
 <% end %>

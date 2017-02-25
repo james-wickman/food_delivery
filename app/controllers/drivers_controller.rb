@@ -15,21 +15,14 @@ class DriversController < ApplicationController
   def show
   	@driver = current_driver
     @orders = @driver.orders
-    if @orders != nil
-      @orders.each do |order|
-        if order.completed = false
-          @old_order = order
-        else
-          @order = Order.where(available: true).first
-        end
-      end
+    @order = nil
+    if current_driver.has_job
+      @old_order = @driver.get_current_job
     else
-      @order = Order.where(available: true).first
-    end
-    if @order != nil && @order.ingredients != nil
-      @ingredients = @order.ingredients.all 
+      @order = Order.get_next_available_job
     end
   end
+
   private
   def driver_params   #controller_params
     params.require(:driver).permit(:available)

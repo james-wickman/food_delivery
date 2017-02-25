@@ -22,8 +22,9 @@
 		<% if @order_ingredients %>
 			<div id="place_order_button">
 				<%= form_tag order_path(@order.id), remote: true, method: :put do %>
-					<%= hidden_field_tag :available, true %>
-					<%= hidden_field_tag :completed, false %>
+
+					<%= hidden_field_tag :available, true %>	
+					<%= hidden_field_tag :completed, false %>	
 					<%= submit_tag "Place Order" %>
 				<% end %>	
 			</div>	
