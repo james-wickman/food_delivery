@@ -1,7 +1,7 @@
 <h2>EDIT DRIVER</h2>
 
 
-<%= form_for(:driver, url: drivers_update_path(:driver), html: { method: :put }) do |f| %>
+<%= form_for(:driver, url: drivers_update_path(:driver), html: { method: :put }, remote: true) do |f| %>
 
   <%= devise_error_messages! %>
   <div class="field">
@@ -77,4 +77,3 @@
 
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-<%= link_to "Back", :back %>
