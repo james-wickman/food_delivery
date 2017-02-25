@@ -1,3 +1,9 @@
-if ($("#<%=@div_id.gsub(/[^0-9A-Za-z]/, '')%>")[0]) {
-	$("#<%=@div_id.gsub(/[^0-9A-Za-z]/, '')%>")[0].remove();
+if ("<%=@current_user%>") {
+	console.log("test");
+	if ($("#<%=@div_id.gsub(/[^0-9A-Za-z]/, '')%>")[0]) {
+		$("#<%=@div_id.gsub(/[^0-9A-Za-z]/, '')%>")[0].remove();
+	}
+} else	{
+	console.log("test");
+	$('#user_signin').addClass('show');
 }
