@@ -82,24 +82,30 @@
             </div>
             <% elsif !user_signed_in? %>
                 <div class="nav-item">
-                  <button class="btn btn-secondary"><%= link_to "Home", driver_session_path %></button>
+                  <button class="btn btn-secondary"><%= link_to "Home", root_path %></button>
+                </div>
+                <div class="nav-item">
+                  <button class="btn btn-secondary"><%= link_to "Profile", drivers_show_path %></button>
                 </div>
               <div class="nav-item">
                 <button class="btn btn-secondary"><%= link_to "Log out", destroy_driver_session_path, method: :delete %></button>
               </div>
               <% else %>
-              <div class="nav-item">
-                <button class="btn btn-secondary"><%= link_to "Home", user_session_path %></button>
-              </div>
-              <div class="nav-item">
-                <button class="btn btn-secondary"><%= link_to "Recipes", recipes_path %></button>
-              </div>
-              <div class="nav-item">
-                <button class="btn btn-secondary"><%= link_to "Cart", order_ingredients_path %></button>
-              </div>
-              <div class="nav-item">
-                <button class="btn btn-secondary"><%= link_to "Log out", destroy_user_session_path, method: :delete %></button>
-              </div>
+                <div class="nav-item">
+                  <button class="btn btn-secondary"><%= link_to "Home", root_path %></button>
+                </div>
+                <div class="nav-item">
+                  <button class="btn btn-secondary"><%= link_to "Profile", users_show_path %></button>
+                </div>
+                <div class="nav-item">
+                  <button class="btn btn-secondary"><%= link_to "Recipes", recipes_path %></button>
+                </div>
+                <div class="nav-item">
+                  <button class="btn btn-secondary"><%= link_to "Cart", order_ingredients_path %></button>
+                </div>
+                <div class="nav-item">
+                  <button class="btn btn-secondary"><%= link_to "Log out", destroy_user_session_path, method: :delete %></button>
+                </div>
               <% end %>
           </div>
         </ul>
