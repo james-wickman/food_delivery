@@ -1,36 +1,36 @@
-<h1>Recipes#show</h1>
 <!-- <p>Find me in app/views/recipes/show.html.erb</p> -->
-<div class="container-fluid">
-	<div class="row">
-		<h3 class="title">
-			<strong>Title:</strong>
-			<%= @recipe.title %>
-		</h3>
-		<div class="col-md-6"><%= image_tag("chicken_stir_fry.jpeg") %></div>
-		<div class="col-md-6">
-			<h3 class="title">Ingredient List</h3>
+<body class="recipe_show_body">
+  
+	<div class="container-fluid">
+		<h1><%= @recipe.title%></h1>
+		<div class="show_container">
+			<div class="image_recipe_title">
+				<%= image_tag("chicken_stir_fry.jpeg") %>
+			</div>
 
-			<ul>
-				<% @recipe.recipe_ingredients.each do |recipe_ingredient| %>
-					<div>
-						<button id="#<%= recipe_ingredient.ingredient.name.gsub(/[^0-9A-Za-z]/, '')%>"><%= link_to "+", orders_path(name: recipe_ingredient.ingredient.name, user_id: @current_user_id), remote: true, method: :post %></button>
-						<%= recipe_ingredient.measurement %>
-					</div>
-				<% end %>
-			</ul>
-
+			<div class="ingredients_list">
+				<h3 class="title">Ingredient List</h3>
+				<hr>
+					<strong>Total Prep/Cooking Time: </strong>
+	  					<%= @recipe.total_time %>
+	  				<hr>
+				<ul>
+					<% @recipe.recipe_ingredients.each do |recipe_ingredient| %>
+						<div>
+							<button id="#<%= recipe_ingredient.ingredient.name.gsub(/[^0-9A-Za-z]/, '')%>"><%= link_to "+", orders_path(name: recipe_ingredient.ingredient.name, user_id: @current_user_id), remote: true, method: :post %></button>
+							<%= recipe_ingredient.measurement %>
+						</div>
+					<% end %>
+				</ul>
+			</div>
 		</div>
+
+		<div id="instructions_box">
+			<strong>Instructions: </strong>
+				<%= @recipe.instructions %>
+		</div>
+
+
 	</div>
 
-	<div class="row">
-	 	<div class="col-md-8">
-	 		<strong>Total Prep/Cooking Time: </strong>
-  				<%= @recipe.total_time %>
-
-			<div class="recipe_instructions">
-				<strong>Instructions: </strong>
-  				<%= @recipe.instructions %>
-	  		</div>
-		</div>
-	</div>
-</div>
+</body>
