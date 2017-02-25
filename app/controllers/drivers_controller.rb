@@ -1,7 +1,6 @@
 class DriversController < ApplicationController
   def update
   	@driver = current_driver
-  	respond_to do |format|
       if @driver.update_attributes(driver_params)
         format.js 
         format.html { redirect_to @driver, notice: 'driver was successfully updated.' }
@@ -10,7 +9,6 @@ class DriversController < ApplicationController
         format.html { render :edit }
         format.json { render json: @driver.errors, status: :unprocessable_entity }
       end
-    end
   end
   def show
   	@driver = current_driver

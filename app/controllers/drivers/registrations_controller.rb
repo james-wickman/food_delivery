@@ -1,5 +1,5 @@
 class Drivers::RegistrationsController < Devise::RegistrationsController
-
+skip_before_filter  :verify_authenticity_token
 before_action :configure_sign_up_params, only: [:create]
 before_action :configure_account_update_params, only: [:update]
 
@@ -52,6 +52,9 @@ before_action :configure_account_update_params, only: [:update]
   # The path used after sign up.
   def after_sign_up_path_for(resource)
     drivers_show_path
+  end
+  def after_update_path_for(resource)
+    return request.env['omniauth.origin'] || request.referrer || root_path
   end
 
   # The path used after sign up for inactive accounts.
