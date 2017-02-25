@@ -1,7 +1,7 @@
 <h2>EDIT DRIVER</h2>
 
 
-<%= form_for(:driver, url: drivers_update_path(:driver), html: { method: :put }, remote: true) do |f| %>
+<%= form_for(:driver, url: driver_registration_path, html: { method: :put }, remote: true) do |f| %>
 
   <%= devise_error_messages! %>
   <div class="field">
