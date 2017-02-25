@@ -9,7 +9,7 @@
   <div class="field">
     <%= f.label :last_name %><br />
     <%= f.text_field :last_name %>
-  <div class="field">
+  </div>
   <div class="fiels">
     <%= f.file_field :avatar %>
   </div>
@@ -56,9 +56,9 @@
   </div>
 
   <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.label :current_password %> <i class="current_password_confirm_warning">(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
+  </div><br>
 
   <div class="actions">
     <%= f.submit "Update" %>

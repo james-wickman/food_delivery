@@ -1,5 +1,5 @@
 class Driver < ApplicationRecord
-	has_attached_file :driver_avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+	has_attached_file :driver_avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "http://joseph-ministries.com/wp-content/uploads/2015/09/default-avatar.jpg"
   	validates_attachment_content_type :driver_avatar, content_type: /\Aimage\/.*\z/
 	has_many :orders
 
