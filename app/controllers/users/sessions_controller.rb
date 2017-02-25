@@ -24,6 +24,7 @@ before_action :configure_sign_in_params, only: [:create]
   end
 
   def after_sign_in_path_for(resource)
-    users_show_path
+    return request.env['omniauth.origin'] || request.referrer || root_path
+    byebug
   end
 end

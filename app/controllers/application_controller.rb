@@ -16,5 +16,6 @@ class ApplicationController < ActionController::Base
  			Order.find(session[:order_id])
  		end
  	end
+ 	
 
 end
