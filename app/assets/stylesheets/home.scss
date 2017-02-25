@@ -158,5 +158,16 @@ body {
 #job_opp {
     width: 75%;
     margin: auto;
+    display: flex;
+    align-items: baseline;
 
+    p {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+blockquote {
+    text-align: center;
+    font-size: 18pt;
 }
