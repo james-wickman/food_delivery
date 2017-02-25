@@ -3,7 +3,9 @@
   
 	<div class="container-fluid">
 		<h1><%= @recipe.title%></h1>
+
 		<div class="show_container">
+
 			<div class="image_recipe_title">
 				<%= image_tag("chicken_stir_fry.jpeg") %>
 			</div>
@@ -17,17 +19,18 @@
 				<ul>
 					<% @recipe.recipe_ingredients.each do |recipe_ingredient| %>
 						<div>
-							<button id="#<%= recipe_ingredient.ingredient.name.gsub(/[^0-9A-Za-z]/, '')%>"><%= link_to "+", orders_path(name: recipe_ingredient.ingredient.name, user_id: @current_user_id), remote: true, method: :post %></button>
+							<button id="<%= recipe_ingredient.ingredient.name.gsub(/[^0-9A-Za-z]/, '')%>"><%= link_to "+", orders_path(name: recipe_ingredient.ingredient.name, user_id: @current_user_id, price: recipe_ingredient.ingredient.price, walmart_id: recipe_ingredient.ingredient.walmart_id), remote: true, method: :post %></button>
 							<%= recipe_ingredient.measurement %>
 						</div>
 					<% end %>
 				</ul>
 			</div>
+
 		</div>
 
 		<div id="instructions_box">
 			<strong>Instructions: </strong>
-				<%= @recipe.instructions %>
+			<%= @recipe.instructions %>
 		</div>
 
 

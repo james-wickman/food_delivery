@@ -1,6 +1,5 @@
 <% @result.items.each do |item| %>
 	<div>
 		<span><%= item.name %> </span> <span> <%= item.price %></span> 
-		<span id="<%=item.name.gsub(/[^0-9A-Za-z]/, '')%>"><%= link_to "Add to grocery list", orders_path(user_id: @current_user_id, name: item.name, price: item.price, walmart_id: item.upc), method: :post, remote: true %></span>		
+		<span id="<%=item.name.gsub(/[^0-9A-Za-z]/, '')%>"><%= link_to "+", orders_path(user_id: @current_user_id, name: item.name, price: item.price, walmart_id: item.upc), method: :post, remote: true %></span>		
 <% end %>
-
