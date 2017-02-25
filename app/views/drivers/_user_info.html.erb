@@ -6,7 +6,7 @@
 	<%= @order.user.city %>
 	<%= @order.user.state %> <br>
 	<%= @order.user.zip %> <hr>
-	<% @ingredients.each do |ingredient| %>
+	<% @order.ingredients.each do |ingredient| %>
 		<%= ingredient.name %>
 	<% end %>
 	<%= form_tag order_path(@order), remote: true, method: :put do %>

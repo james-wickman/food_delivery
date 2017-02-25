@@ -7,4 +7,15 @@ class Driver < ApplicationRecord
   	# :confirmable, :lockable, :timeoutable and :omniauthable
  	devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+    def has_job
+	  if self.orders.where(completed: false).first
+	    true
+	  end
+	  false
+	end
+
+	def get_current_job
+	  self.orders.where(completed: false).first
+	end
 end

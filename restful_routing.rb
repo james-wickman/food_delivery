@@ -22,7 +22,7 @@
         recipe_ingredients GET    /recipe_ingredients(.:format)          recipe_ingredients#index
                            POST   /recipe_ingredients(.:format)          recipe_ingredients#create
      new_recipe_ingredient GET    /recipe_ingredients/new(.:format)      recipe_ingredients#new
-    edit_recipe_ingredient GET    /recipe_ingredients/:id/edit(.:format) recipe_ingredients#edit 
+    edit_recipe_ingredient GET    /recipe_ingredients/:id/edit(.:format) recipe_ingredients#edit
          recipe_ingredient GET    /recipe_ingredients/:id(.:format)      recipe_ingredients#show
                            PATCH  /recipe_ingredients/:id(.:format)      recipe_ingredients#update
                            PUT    /recipe_ingredients/:id(.:format)      recipe_ingredients#update
