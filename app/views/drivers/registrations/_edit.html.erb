@@ -9,6 +9,9 @@
     <div id='target'></div>
     <%= range_field_tag 'radius', in: 4...16, step: 1 %>
   </div>
+  <div class="fiels">
+    <%= f.file_field :driver_avatar %>
+  </div>
   <div class="field">
     <%= f.label :first_name %><br />
     <%= f.text_field :first_name, autofocus: true %>
