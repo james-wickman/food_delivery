@@ -11,8 +11,9 @@ class Driver < ApplicationRecord
     def has_job
 	  if self.orders.where(completed: false).first
 	    true
+	  else
+	  	false
 	  end
-	  false
 	end
 
 	def get_current_job

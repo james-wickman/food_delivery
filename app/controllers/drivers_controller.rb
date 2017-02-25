@@ -17,12 +17,14 @@ class DriversController < ApplicationController
     @orders = @driver.orders
     @order = nil
     if current_driver.has_job
-      @old_order = current_driver.get_current_job
+      @old_order = @driver.get_current_job
     else
       @order = Order.get_next_available_job
     end
+    byebug
+
   end
-  
+
   private
   def driver_params   #controller_params
     params.require(:driver).permit(:available)

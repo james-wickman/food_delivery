@@ -12,7 +12,7 @@
 		      <a class="nav-link active" data-toggle="tab" href="#not_ready" role="tab" aria-controls="not_ready">Main</a>
 		    </li>
 		  	<li class="nav-item">
-		      <a class="nav-link" data-toggle="tab" href="#edit_profile" role="tab" aria-controls="edit_profile">Edit Profile</a>
+		      <a class="nav-link" data-toggle="tab" href="#edit_profile" role="tab" aria-controls="edit_profile">Edit Profile</a> 
 		    </li>
 		   </ul>
 		  <div class="tab-content">
@@ -34,8 +34,9 @@
 						<% if @order != nil %>
 							one job available in <%= @order.user.city %>
 							<%= form_tag order_path(@order), remote: true, method: :put do %>
-								<%= hidden_field_tag :available, value: false %>				  
-								<%= hidden_field_tag :completed, value: false %>
+								<%= hidden_field_tag :available, false %>				  
+								<%= hidden_field_tag :completed, false %>
+								<%= hidden_field_tag :driver_id, @driver.id %>
 								<%= submit_tag "Accept" %>
 							<% end %>
 						<% else %>

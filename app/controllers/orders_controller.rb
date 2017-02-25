@@ -78,7 +78,7 @@ class OrdersController < ApplicationController
       session[:order_id] = nil
       if @order.update_attributes(order_params)
         if @driver != nil
-          format.html { redirect_to drivers_show, notice: 'Order was successfully completed.' }        
+          format.html { redirect_to drivers_show_path, notice: 'Order was successfully completed.' }        
         end
         format.js
       end
