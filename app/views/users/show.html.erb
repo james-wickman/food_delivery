@@ -2,6 +2,8 @@
 <div class="user_show_page">
 	<div class="driver_info">
 		<div class="user_info">
+
+			<%= image_tag @user.avatar.url(:thumb) %> <br>
 			<h3><%= @user.first_name %> 
 			<%= @user.last_name %></h3>
 			<h4><%= @user.email %></h4>

@@ -1,6 +1,6 @@
 <div class="driver_show_page">
 	<div class="driver_info">
-	 
+	 <%= image_tag @driver.driver_avatar.url(:thumb) %> <br>
 	 <h3><%= @driver.first_name %>
 	 <%= @driver.last_name %></h3>
 	 <h3><%= @driver.email %></h3> 
