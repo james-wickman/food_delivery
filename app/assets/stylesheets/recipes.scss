@@ -2,11 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-.index_container{
-	display: inline-flex;
+.recipe_show_body {
 	background-color: #C8FAEF;
 	width: 100%;
+}
+
+//Recipes#index styles  
+.index_container{
+	display: inline-flex;
+÷
 
 	h1 {
 		text-align: center;
@@ -44,3 +48,26 @@
 #searchResults {
 	border: double 4px black;
 }
+
+//recipes#show styles here
+.show_container{
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: space-around;
+	background-color: #C8FAEF;
+	width: 100%;
+
+	.image_recipe_title{
+		align-content: flex-start;
+
+	}
+
+	.ingredients_list {
+		align-content: flex-start;
+	}
+}
+
+	#instructions_box {
+		width: 75%;
+		padding: 20px;
+	}
