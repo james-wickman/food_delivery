@@ -1,33 +1,39 @@
-<h1>OrderIngredients#index</h1>
+<body class="recipe_show_body">
+<!-- <h1>OrderIngredients#index</h1>
+ -->
+<div class="cart_container">
+ 	<h1>Shopping Cart</h1>
+		<div id="cart">
+			<% if @user.first_name == nil || @user.last_name == nil || @user.address == nil || @user.city == nil || @user.state == nil || @user.zip == nil || @user.phone_number == nil %>
 
-<div id="cart">
-	<% if @user.first_name == nil || @user.last_name == nil || @user.address == nil || @user.city == nil || @user.state == nil || @user.zip == nil || @user.phone_number == nil %>
+				<h3>Update your information to place an order!</h3>
+				<%= render "users/registrations/edit" %>
 
-		<h3>Update your information to place an order!</h3>
-		<%= render "users/registrations/edit" %>
-
-	<% else %>
-
-		<div id="order_ingredients_list">
-			<% if session[:order_id] %>
-				<%= render 'order_ingredients_list' %>
 			<% else %>
-				<div class="nothing_in_cart">
-					<h3>Nothing is in your cart right now</h3>
+
+				<div id="order_ingredients_list">
+					<% if session[:order_id] %>
+						<%= render 'order_ingredients_list' %>
+					<% else %>
+						<div class="nothing_in_cart">
+							<h3>Nothing is in your cart right now</h3>
+						</div>
+					<% end %>
 				</div>
-			<% end %>
+
+				<% if @order_ingredients %>
+					<div id="place_order_button">
+						<%= form_tag order_path(@order.id), remote: true, method: :put do %>
+
+							<%= hidden_field_tag :available, true %>	
+							<%= hidden_field_tag :completed, false %>	
+							<%= submit_tag "Place Order" %>
+						<% end %>	
+					</div>	
+				<% end %>
+
+			<% end %>	
 		</div>
-
-		<% if @order_ingredients %>
-			<div id="place_order_button">
-				<%= form_tag order_path(@order.id), remote: true, method: :put do %>
-
-					<%= hidden_field_tag :available, true %>	
-					<%= hidden_field_tag :completed, false %>	
-					<%= submit_tag "Place Order" %>
-				<% end %>	
-			</div>	
-		<% end %>
-
-	<% end %>	
-</div>
+	</div>
+	
+</body>
