@@ -11,20 +11,25 @@
 
 	</div>
 	<div class="users_settings">
-		 <ul class="nav user_nav nav-tabs" id="myTab" role="tablist">
+		<ul class="nav user_nav nav-tabs" role="tablist">
 		    <li class="nav-item">
-		      <a class="nav-link active" data-toggle="tab" href="#not_ready" role="tab" aria-controls="not_ready">Preferences</a>
+		      <a class="nav-link active" data-toggle="tab" href="#not_ready" role="tab">Preferences</a>
 		    </li>
 		  	<li class="nav-item">
-		      <a class="nav-link" data-toggle="tab" href="#edit_profile" role="tab" aria-controls="edit_profile">Edit Profile</a>
+		      <a class="nav-link" data-toggle="tab" href="#edit_profile" role="tab">Edit Profile</a>
 		    </li>
-		   </ul>
-		  <div class="tab-content">
+		</ul>
 
-		    <div class="tab-pane active" id="not_ready" role="tabpanel">Preferences</div>
 
-		    <div class="tab-pane" id="edit_profile" role="tabpanel"><%= render 'users/registrations/edit' %></div>
-		  </div>
+		<div class="tab-content">
+  			<div class="tab-pane active" id="not_ready" role="tabpanel">Preferences</div>
+  			<div class="tab-pane" id="edit_profile" role="tabpanel"><%= render 'users/registrations/edit' %></div>
+	<!-- 	<div class="tab-content">
+
+		    <div class="tab-pane active" id="not_ready" role="tabpane">Preferences</div>
+
+		    <div class="tab-pane" id="edit_profile" role="tabpane"><%= render 'users/registrations/edit' %></div> -->
+		</div>
 	</div>
 </div>
 
