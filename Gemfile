@@ -43,7 +43,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
 end
 
-group :development do
+group :development do 
   gem 'restful_routing'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
