@@ -7,7 +7,7 @@
 		<% line_total = order_ingredient.ingredient.price * order_ingredient.quantity%>
 		<li>
 			<span>Ingredient: <%= order_ingredient.ingredient.name %></span>
-			<span>Price: <%= order_ingredient.ingredient.price %></span>
+			<span>Price: <%= number_to_currency(order_ingredient.ingredient.price) %></span>
 			<span>
 				<%= form_tag order_ingredient_path(order_ingredient.id), remote: true, method: :put do %>
 					<%= hidden_field_tag :id, value: order_ingredient.id %>
@@ -16,7 +16,7 @@
 					<%= submit_tag "update"%>					  
 				<% end %>				
 			</span>	
-			<span>Item Total: <span id="lineTotal"><%= line_total %></span></span>
+			<span>Item Total: <span id="lineTotal"><%= number_to_currency(line_total) %></span></span>
 			<% order_total = order_total + line_total %>
 			<%= link_to "Remove", order_ingredient_path(id: order_ingredient.id), method: :delete, remote: true %>
 		</li>
@@ -24,7 +24,7 @@
 	<% end %>
 
 	<div id="orderTotal">
-		<h3>Order Total: <%= order_total %></h3>
+		<h3>Order Total: <%= number_to_currency(order_total) %></h3>
 	</div>
 	
 </ul>
