@@ -21,7 +21,7 @@ body {
 
 //Hero image at top of home page
 #home_header {
-    background-image: url(grocery_delivery.jpg);
+    background: image-url("grocery_delivery.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     position: relative;
@@ -146,6 +146,7 @@ body {
     margin: auto;
     text-align: center;
     padding-top: 50px;
+    line-height: 2.5;
 
 }
 

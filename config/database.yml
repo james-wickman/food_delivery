@@ -22,4 +22,10 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  database: food_delivery_production
+  username: food_delivery
+  password: Rove!212
+  host: localhost
+  pool: 5
