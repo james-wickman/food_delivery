@@ -11,42 +11,17 @@
 .index_container{
 	display: inline-flex;
 	background-color: #C8FAEF;
+}
+#recipe_index_photo {
+	background-image: url(fruit_veg_grid.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    background-size: cover;
+    height: 600px;
+}
 
-	h1 {
-		text-align: center;
-		align-content: center;
-		line-height: 2.0em;
-	}
 
-	#recipe_index_photo {
-		background-image: url(fruit_veg_grid.jpg);
-	    background-repeat: no-repeat;
-	    background-position: center center;
-	    position: relative;
-	    background-size: cover!important;
-	    height: 600px;
-	}
-
-	.search_form {
-		flex-direction: column;
-		justify-content: center;
-	}
-
-		#search_ing {
-			margin: 5rem auto 0 auto;
-	    	background: rgba(255,255,255,1);
-	    	border-radius: 40px;
-	    	padding: 7px 20px;
-	    	align-content: space-around;
-		}
-
-		#search_recipes {
-			margin: 5rem auto 0 auto;
-	    	background: rgba(255,255,255,1);
-	    	border-radius: 40px;
-	    	padding: 7px 20px;
-		}
-	}
 
 #searchResults {
 	border: double 4px black;
@@ -77,3 +52,10 @@
 		width: 75%;
 		padding: 20px;
 	}
+
+
+
+
+
+
+
